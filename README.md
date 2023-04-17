@@ -17,6 +17,6 @@
     <img align="center" src="https://github-readme-stats.vercel.app/api?username=dabao1955&theme=radical" />
   </a>
   <a href="https://github.com/dabao1955" style="display: block; text-align: center;">
-    <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=dabao1955>
+    <img align="center" src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=dabao1955&layout%3E">
   </a>
 </div>
