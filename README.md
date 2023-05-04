@@ -8,9 +8,9 @@
 
 ### 💻 Environment
 
-[![Windows](https://img.shields.io/badge/Windows-00BBFF?style=flat-square&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows11)
+[![Windows](https://img.shields.io/badge/Windows%2011-00BBFF?style=flat-square&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows11)
 [![Debian](https://img.shields.io/badge/Debian%20Bookworm-ff0000?style=flat-square&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/bookworm/)
-[![Android](https://img.shields.io/badge/Android-00C000?style=flat-square&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
+[![Android](https://img.shields.io/badge/Android%2012-00C000?style=flat-square&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
 
 ### 📱 Devices
 [![Xiaomi 10 Pro](https://img.shields.io/badge/Xiaomi%2010-Pro-ED9121?style=flat-square&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
