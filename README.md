@@ -8,17 +8,9 @@
 ### I'm a high school senior and Linux enthusiast who loves the spirit of open source
 
 ### Try contacting me
-![contact me](https://api.xecades.xyz/api?img=1&github=dabao1955&email=dabao1955%40163.com&qq=195328750&luogu=533270&bilibili=argvchs)
+![contact me](https://api.xecades.xyz/api?img=1&github=dabao1955&email=dabao1955%40163.com&qq=195328750&bilibili=dabao1955)
 
-随机 ♂ 图
 
-- https://www.dmoe.cc/random.php
-
-- https://img.xjh.me/random_img.php
-
-- https://pixiv-api.vercel.app
-
-- https://api.ixiaowai.cn/api/api.php
 
 <div style="display: flex;">
   <a href="https://github.com/dabao1955" style="flex: 1; display: block; text-align: center;">
@@ -32,3 +24,15 @@
 
 
 ![这是图片](https://cdn.luogu.com.cn/upload/pic/69538.png)
+
+# 随机 ♂ 图
+
+- https://www.dmoe.cc/random.php
+
+- https://img.xjh.me/random_img.php
+
+- https://pixiv-api.vercel.app
+
+- https://api.ixiaowai.cn/api/api.php
+
+![这是图片](https://s1.ax1x.com/2018/04/04/C9ANLV.gif)
