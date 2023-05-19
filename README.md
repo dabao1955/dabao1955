@@ -12,6 +12,11 @@
 [![Debian](https://img.shields.io/badge/Debian%20Bookworm-ff0000?style=flat-square&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/bookworm/)
 [![Android](https://img.shields.io/badge/Android%2012-00C000?style=flat-square&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
 
+### 📜 Editor
+
+[![](https://img.shields.io/badge/IDE-XCache-FF2337?style=flat-square&logo=XCache&logoColor=ffffff)](https://space-longan.beanflame.cn/devtool/XCache.html/)[![](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blue?style=flat-square&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)[![](https://img.shields.io/badge/IDE-VisualStudio-672179?style=flat-square&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)[![](https://img.shields.io/badge/IDE-Vim-019733?style=flat-square&logo=vim&logoColor=ffffff)](https://www.vim.org/) 
+
+
 ### 📱 Devices
 [![Xiaomi 10 Pro](https://img.shields.io/badge/Xiaomi%2010-Pro-ED9121?style=flat-square&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
@@ -35,15 +40,6 @@
 
 ![这是图片](https://cdn.luogu.com.cn/upload/pic/69538.png)
 
-# 随机 ♂ 图
-
-- https://www.dmoe.cc/random.php
-
-- https://img.xjh.me/random_img.php
-
-- https://pixiv-api.vercel.app
-
-- https://api.ixiaowai.cn/api/api.php
 
 ![这是图片](https://s1.ax1x.com/2018/04/04/C9ANLV.gif)
 
