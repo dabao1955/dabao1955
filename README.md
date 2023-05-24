@@ -19,7 +19,7 @@
 
 
 ### 📱 Devices
-[![Sony Xperia 1 iii](https://img.shields.io/badge/xperia%201%20iii-black?style=for-the-badge&logo=sony)](https://sony.com.cn)
+[![Sony Xperia 1 iii](https://img.shields.io/badge/xperia%201%20iii-black?style=flat-square&logo=sony)](https://sony.com.cn)
 [![Xiaomi 10 Pro](https://img.shields.io/badge/Xiaomi%2010-Pro-ED9121?style=flat-square&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
 ### I'm a high school senior and Linux enthusiast who loves the spirit of open source
