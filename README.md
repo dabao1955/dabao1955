@@ -9,7 +9,7 @@
 ### 💻 Environment
 
 [![Windows](https://img.shields.io/badge/Windows%2010-00BBFF?style=flat-square&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
-[![Debian](https://img.shields.io/badge/Debian%20sid-ff0000?style=flat-square&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
+[![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=flat-square&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
 [![Android](https://img.shields.io/badge/Android%2012-00C000?style=flat-square&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
 
 ### 📜 Editor
