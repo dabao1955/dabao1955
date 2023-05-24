@@ -22,6 +22,20 @@
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
 ### I'm a high school senior and Linux enthusiast who loves the spirit of open source
 
+### Things I can do
+
+
+- ~~Eating~~
+
+- ~~Wasting time~~
+
+- ~~Cloud porting & Cloud adaptating Kernel(I'm a rookie.)~~
+
+- ~~Day dreaming(I am really good at this.)~~
+
+- I can do nothing 😭
+
+
 ### Try contacting me
 ![contact me](https://api.xecades.xyz/api?img=1&github=dabao1955&email=dabao1955%40163.com&qq=195328750&bilibili=dabao1955)
 
