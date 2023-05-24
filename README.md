@@ -7,17 +7,19 @@
 
 
 ### 💻 Environment
-
 [![Windows](https://img.shields.io/badge/Windows%2010%201809-00BBFF?style=flat-square&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
 [![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=flat-square&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
 [![Android](https://img.shields.io/badge/Android%2012-00C000?style=flat-square&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
 
 ### 📜 Editor
 
+
+
 [![](https://img.shields.io/badge/IDE-XCache-FF2337?style=flat-square&logo=XCache&logoColor=ffffff)](https://space-longan.beanflame.cn/devtool/XCache.html/)[![](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blue?style=flat-square&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)[![](https://img.shields.io/badge/IDE-VisualStudio-672179?style=flat-square&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)[![](https://img.shields.io/badge/IDE-Vim-019733?style=flat-square&logo=vim&logoColor=ffffff)](https://www.vim.org/) 
 
 
 ### 📱 Devices
+[![Sony Xperia 1 iii]](https://img.shields.io/badge/xperia%201%20iii-black?style=for-the-badge&logo=sony)](https://sony.com.cn)
 [![Xiaomi 10 Pro](https://img.shields.io/badge/Xiaomi%2010-Pro-ED9121?style=flat-square&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
 ### I'm a high school senior and Linux enthusiast who loves the spirit of open source
