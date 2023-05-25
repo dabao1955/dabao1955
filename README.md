@@ -15,7 +15,9 @@
 
 
 
-[![](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=flat-square&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)[![](https://img.shields.io/badge/VisualStudio-672179?style=flat-square&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
+[![](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=flat-square&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
+
+[![](https://img.shields.io/badge/VisualStudio-672179?style=flat-square&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
 
 
 ### 📱 Devices
