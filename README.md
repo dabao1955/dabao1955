@@ -4,7 +4,8 @@
 
 
 ![Visitor Count](https://profile-counter.glitch.me/dabao1955/count.svg)
-[dabao1955's GitHub stats](https://github-readme-stats.vercel.app/api?username=dabao1955)
+
+
 ### 💻 Environment
 [![Windows](https://img.shields.io/badge/Windows%2010%201809-00BBFF?style=flat-square&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
 [![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=flat-square&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
