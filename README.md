@@ -40,6 +40,10 @@
 - I can do nothing 😭
 
 
+![Topic Stats](https://github-readme-stats.vercel.app/api?username=dabao1955&show_icons=true&locale=cn&hide_border=true&theme=tokyonight&bg_color=white) 
+ ![Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=dabao1955&layout=compact&locale=cn&hide_border=true&theme=tokyonight&bg_color=white) 
+ ![Commit Stats](https://github-readme-activity-graph.vercel.app/graph?username=dabao1955&theme=react-dark&bg_color=white&point=66ccff)
+
 ### Try contacting me
 ![contact me](https://api.xecades.xyz/api?img=1&github=dabao1955&email=dabao1955%40163.com&qq=195328750&bilibili=dabao1955)
 
