@@ -7,9 +7,9 @@
 
 
 ### 💻 Environment
-[![Windows](https://img.shields.io/badge/Windows%2010%201809-00BBFF?style=flat-square&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
-[![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=flat-square&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
-[![Android](https://img.shields.io/badge/Android%2012-00C000?style=flat-square&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
+[![Windows](https://img.shields.io/badge/Windows%2010%201809-00BBFF?style=for-the-badge&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
+[![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=for-the-badge&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
+[![Android](https://img.shields.io/badge/Android%2012-00C000?style=for-the-badge&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
 
 <p>
   <img alt="git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
@@ -19,15 +19,15 @@
 
 
 
-[![](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=flat-square&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
-[![](https://img.shields.io/badge/VisualStudio-672179?style=flat-square&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
+[![](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=for-the-badge&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
+[![](https://img.shields.io/badge/VisualStudio-672179?style=for-the-badge&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
 [![](https://img.shields.io/badge/-GNU%20nano-orange)](https://www.nano-editor.org/)
 
 
 
 ### 📱 Devices
-[![Sony Xperia 1 iii](https://img.shields.io/badge/xperia%201%20iii-black?style=flat-square&logo=sony)](https://sony.com)
-[![Xiaomi 10 Pro](https://img.shields.io/badge/Mi%2010-Pro-ED9121?style=flat-square&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
+[![Sony Xperia 1 iii](https://img.shields.io/badge/xperia%201%20iii-black?style=for-the-badge&logo=sony)](https://sony.com)
+[![Xiaomi 10 Pro](https://img.shields.io/badge/Mi%2010-Pro-ED9121?style=for-the-badge&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
 ### I'm a high school senior and Linux enthusiast who loves the spirit of open source
 
