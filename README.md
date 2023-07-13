@@ -10,13 +10,18 @@
 [![Windows](https://img.shields.io/badge/Windows%2010%201809-00BBFF?style=for-the-badge&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
 [![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=for-the-badge&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
 [![Android](https://img.shields.io/badge/Android%2012-00C000?style=for-the-badge&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
+[![](https://img.shields.io/badge/ServerLess-Netlify-00C7B7?style=for-the-badge&logo=Netlify)](https://www.netlify.com/) [![](https://img.shields.io/badge/DNS-CloudFlare-F38020?style=for-the-badge&logo=CloudFlare)](https://www.cloudflare.com) 
+[![](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX)](https://nginx.org/)
 
 <p>
   <img alt="git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
   <img alt="github actions" src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" />
 </p>
 
-
+[![](https://img.shields.io/badge/Browser-Microsoft%20Edge-0078D7?style=for-the-badge&logo=Microsoft-Edge)](https://www.microsoft.com/zh-cn/edge/) 
+### 🚧 Language
+[![](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python)](https://www.python.org/) 
+[![](https://img.shields.io/badge/Language-HTML5-E34F26?style=for-the-badge&logo=HTML5)](https://www.w3.org/) 
 ### 📜 Editor
 
 
@@ -30,6 +35,7 @@
 [![Sony Xperia 1 iii](https://img.shields.io/badge/xperia%201%20iii-black?style=for-the-badge&logo=sony)](https://sony.com)
 [![Samsung Galaxy Note20 Ultra](https://img.shields.io/badge/Note%2020%20Ultra-black?style=for-the-badge&logo=samsung)](https://samsung.com)
 [![Xiaomi 10 Pro](https://img.shields.io/badge/Mi%2010-Pro-ED9121?style=for-the-badge&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
+[![Redmi K20 Pro](https://img.shields.io/badge/Redmi%20K20-Pro-ED9121?style=for-the-badge&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue?style=for-the-badge)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
 ### I'm a high school senior and Linux enthusiast who loves the spirit of open source
 
