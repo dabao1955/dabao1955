@@ -6,7 +6,7 @@
      <a href="https://github.com/dabao1955"><img src="/assets/star-rail-kuru.gif" width="150" height="150" alt="kuru kuru.png" style="border: 2px solid cyan; border-radius: 50%"></a>
    </div>
    <div>
-     <a href="https://github.com/nekitori17"><img src="https://readme-typing-svg.herokuapp.com?font=Saira&size=17&duration=3000&pause=1000&color=F796B1&center=true&vCenter=true&width=240&height=35&lines=Nekitori17;Nekitori+Hakari;Nguy%E1%BB%85n+Ng%E1%BB%8Dc+C%C6%B0%E1%BB%9Dng" alt="Typing SVG" style="margin: 10px; border-radius: 5%; box-shadow: 0 0 17px 6px lightpink; border: 0.5px solid red" /></a>
+     <a href="https://github.com/dabao1955"><img src="https://readme-typing-svg.herokuapp.com?font=Saira&size=17&duration=3000&pause=1000&color=F796B1&center=true&vCenter=true&width=240&height=35&lines=dabao1955;Nekitori+Hakari;Nguy%E1%BB%85n+Ng%E1%BB%8Dc+C%C6%B0%E1%BB%9Dng" alt="Typing SVG" style="margin: 10px; border-radius: 5%; box-shadow: 0 0 17px 6px lightpink; border: 0.5px solid red" /></a>
    </div>
 
 
