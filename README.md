@@ -67,11 +67,6 @@
 
 
 
-
-
-![这是图片](https://cdn.luogu.com.cn/upload/pic/69538.png)
-
-
-![这是图片](https://s1.ax1x.com/2018/04/04/C9ANLV.gif)
-
-![这是图片](https://gss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D450%2C600/sign=90881c4dc63d70cf4cafa209cdecfd36/adaf2edda3cc7cd962a67aad3601213fb80e913f.jpg)
+ <div>
+ <a href="https://github.com/nekitori17"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:c7fdff,100:bf75ff&height=150&section=footer&reversal=true" width="100%"></a>
+</div>
