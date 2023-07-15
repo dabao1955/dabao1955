@@ -4,8 +4,6 @@
  <p align="center">May The Force Be With You</p>
 
 <p align="center">(>_×)</p>         
-
------------  
  <div align="center">
    <a href="https://github.com/dabao1955"><img src="https://readme-typing-svg.herokuapp.com?font=Saira&duration=4000&pause=1000&color=006EF7&center=true&width=435&lines=Hello%2C+Guys!;Welcome+To+My+Page" alt="Typing Svg" style="margin-bottom: 10px"></a>
    <div>
