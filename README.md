@@ -1,5 +1,11 @@
 <div>
  <a href="https://github.com/"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:c7fdff,100:8a70ff&height=150&text=Github&desc=.inc&animation=twinkling&fontColor=000454&fontSize=40&fontAlignY=25&rotate=1&descAlignY=45&descAlign=57" width="100%"></a>
+
+ <p align="center">May The Force Be With You</p>
+
+<p align="center">(>_×)</p>         
+
+-----------  
  <div align="center">
    <a href="https://github.com/dabao1955"><img src="https://readme-typing-svg.herokuapp.com?font=Saira&duration=4000&pause=1000&color=006EF7&center=true&width=435&lines=Hello%2C+Guys!;Welcome+To+My+Page" alt="Typing Svg" style="margin-bottom: 10px"></a>
    <div>
@@ -68,5 +74,5 @@
 
 
  <div>
- <a href="https://github.com/nekitori17"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:c7fdff,100:bf75ff&height=150&section=footer&reversal=true" width="100%"></a>
+ <a href="https://github.com/"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:c7fdff,100:bf75ff&height=150&section=footer&reversal=true" width="100%"></a>
 </div>
