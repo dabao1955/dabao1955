@@ -64,7 +64,15 @@
 - I can do nothing 😭
 
 
- ![Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=dabao1955&layout=compact&locale=cn&hide_border=true&theme=tokyonight&bg_color=white) 
+<table>
+  <tr>
+    <td>
+<img src="https://github-readme-stats.vercel.app/api?username=dabao1955&show_icons=true&icon_color=E91E63&title_color=FB7299&hide_border=true&locale=cn" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dabao1955&layout=compact&title_color=000000&hide_border=true&locale=cn" />  </td>
+    <td>
+<img src="https://github.com/KawaiiZapic/KawaiiZapic/blob/master/\(.gif?raw=true" align="right" width="300"/> </td>
+  </tr>
+  </table>
  
 ### Try contacting me
 ![contact me](https://api.xecades.xyz/api?img=1&github=dabao1955&email=dabao1955%40163.com&qq=195328750&bilibili=dabao1955)
