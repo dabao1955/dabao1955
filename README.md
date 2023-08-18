@@ -73,6 +73,10 @@
 <img src="https://github.com/KawaiiZapic/KawaiiZapic/blob/master/\(.gif?raw=true" align="right" width="300"/> </td>
   </tr>
   </table>
+  
+<!--START_SECTION:waka-->
+
+<!--END_SECTION:waka-->
  
 ### Try contacting me
 ![contact me](https://api.xecades.xyz/api?img=1&github=dabao1955&email=dabao1955%40163.com&qq=195328750&bilibili=dabao1955)
