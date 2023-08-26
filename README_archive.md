@@ -17,12 +17,12 @@
 ![Visitor Count](https://profile-counter.glitch.me/dabao1955/count.svg)
 
 
-### 💻 Environment
+### 💻 Operating System
 [![Windows](https://img.shields.io/badge/Windows%2010%201809-00BBFF?style=for-the-badge&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
 [![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=for-the-badge&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
 [![Android](https://img.shields.io/badge/Android%2012-00C000?style=for-the-badge&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
 
-### DevOps
+### 🤖 DevOps
 
 [![](https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&labelColor=black)](https://github.com)
 [![](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&labelColor=black)](https://docker.com)
@@ -40,7 +40,6 @@
 [![](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python)](https://www.python.org/) 
 [![](https://img.shields.io/badge/Language-HTML5-E34F26?style=for-the-badge&logo=HTML5)](https://www.w3.org/) 
 ### 📜 Editor
-
 
 [![](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=for-the-badge&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
 [![](https://img.shields.io/badge/VisualStudio-672179?style=for-the-badge&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
