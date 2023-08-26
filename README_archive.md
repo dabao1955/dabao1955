@@ -31,7 +31,7 @@
 [![](https://img.shields.io/badge/Git-F54D27?style=for-the-badge&logo=git&labelColor=black)](https://git-scm.com)
 [![](https://img.shields.io/badge/ServerLess-Netlify-00C7B7?style=for-the-badge&logo=Netlify)](https://www.netlify.com/) [![](https://img.shields.io/badge/DNS-CloudFlare-F38020?style=for-the-badge&logo=CloudFlare)](https://www.cloudflare.com) 
 [![](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX)](https://nginx.org/)
-
+[![github actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/actions)
 
 ### Broser
 
