@@ -44,7 +44,7 @@
 [![](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=for-the-badge&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
 [![](https://img.shields.io/badge/VisualStudio-672179?style=for-the-badge&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
 [![](https://img.shields.io/badge/-GNU%20nano-orange?style=for-the-badge)](https://www.nano-editor.org/)
-
+[![](https://img.shields.io/badge/-KDE%20Kate%20Editor-blue?style=for-the-badge)](https://kate-editor.org/zh-cn/)
 
 
 ### 📱 Devices
