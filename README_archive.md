@@ -21,13 +21,19 @@
 [![Windows](https://img.shields.io/badge/Windows%2010%201809-00BBFF?style=for-the-badge&logo=Windows&logoColor=FFFFFF&labelColor=00BBFF)](https://www.microsoft.com/windows10)
 [![Debian](https://img.shields.io/badge/Debian%20GNU/Linux%20sid-ff0000?style=for-the-badge&logo=debian&logoColor=ffffff)](https://www.debian.org/releases/sid/)
 [![Android](https://img.shields.io/badge/Android%2012-00C000?style=for-the-badge&logo=android&logoColor=FFFFFF&labelColor=00C000)](https://www.android.com/android-12/)
+
+### DevOps
+
+[![](https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&labelColor=black)](https://github.com)
+[![](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&labelColor=black)](https://docker.com)
+[![](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&labelColor=black)](https://vercel.com)
+[![](https://img.shields.io/badge/Gitea-609926?style=for-the-badge&logo=gitea&labelColor=black)](https://about.gitea.com)
+[![](https://img.shields.io/badge/Git-F54D27?style=for-the-badge&logo=git&labelColor=black)](https://git-scm.com)
 [![](https://img.shields.io/badge/ServerLess-Netlify-00C7B7?style=for-the-badge&logo=Netlify)](https://www.netlify.com/) [![](https://img.shields.io/badge/DNS-CloudFlare-F38020?style=for-the-badge&logo=CloudFlare)](https://www.cloudflare.com) 
 [![](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX)](https://nginx.org/)
 
-<p>
-  <img alt="git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
-  <img alt="github actions" src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" />
-</p>
+
+### Broser
 
 [![](https://img.shields.io/badge/Browser-Microsoft%20Edge-0078D7?style=for-the-badge&logo=Microsoft-Edge)](https://www.microsoft.com/zh-cn/edge/) 
 ### 🚧 Language
