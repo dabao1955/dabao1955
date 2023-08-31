@@ -69,7 +69,7 @@ Don't like to reinvent the wheel, like to contribute repository
 
 - ~~Day dreaming(I am really good at this.)~~
 
-- ~~Translating(私は英語と日本語を少ししか話せません)
+- ~~Translating(私は英語と日本語を少ししか話せません)~~
 
 - I can do nothing 😭
 
