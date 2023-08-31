@@ -57,6 +57,7 @@
 
 Don't like to reinvent the wheel, like to contribute repository
 
+
 ### Things I can do
 
 
@@ -67,6 +68,8 @@ Don't like to reinvent the wheel, like to contribute repository
 - ~~Cloud porting & Cloud adaptating Kernel(I'm a rookie.)~~
 
 - ~~Day dreaming(I am really good at this.)~~
+
+- ~~Translating(私は英語と日本語を少ししか話せません)
 
 - I can do nothing 😭
 
