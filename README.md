@@ -53,7 +53,7 @@
 [![Xiaomi 10 Pro](https://img.shields.io/badge/Mi%2010-Pro-ED9121?style=for-the-badge&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
 [![Redmi K20 Pro](https://img.shields.io/badge/Redmi%20K20-Pro-ED9121?style=for-the-badge&logo=xiaomi&logoColor=FFFFFF&labelColor=ED9121)](https://www.mi.com/)
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue?style=for-the-badge)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
-### I am a newbie on github , currently learning the Android kernel and Linux enthusiast who loves the spirit of open source.
+### I am a new comer on github and currently learning the Android kernel. I think Linux enthusiast who loves the spirit of open source.
 
 Don't like to reinvent the wheel, like to contribute repository
 
