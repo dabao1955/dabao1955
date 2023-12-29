@@ -33,7 +33,7 @@
 [![Nginx](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX)](https://nginx.org/)
 [![github actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/actions)
 [![kde](https://img.shields.io/badge/-KDE-blue?style=for-the-badge&logo=kde&logoColor=ffffff)](https://kde.org)
-[![PowerShell](https://img.shields.io/badge/-PowerShell-blue?style=for-the-badge&logo=powershell&logoColor=1b1b53)](https://github.com/PowerShell/PowerShell)
+[![PowerShell](https://img.shields.io/badge/-PowerShell-purple?style=for-the-badge&logo=powershell&logoColor=ffffff)](https://github.com/PowerShell/PowerShell)
 
 ### Browser
 
