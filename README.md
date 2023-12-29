@@ -32,6 +32,8 @@
 [![Netlify](https://img.shields.io/badge/ServerLess-Netlify-00C7B7?style=for-the-badge&logo=Netlify)](https://www.netlify.com/) [![](https://img.shields.io/badge/DNS-CloudFlare-F38020?style=for-the-badge&logo=CloudFlare)](https://www.cloudflare.com) 
 [![Nginx](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX)](https://nginx.org/)
 [![github actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/actions)
+[![kde](https://img.shields.io/badge/-KDE-blue?style=for-the-badge&logo=kde&logoColor=ffffff)](https://kde.org)
+[![PowerShell](https://img.shields.io/badge/-PowerShell-blue?style=for-the-badge&logo=powershell&logoColor=1b1b53)](https://github.com/PowerShell/PowerShell)
 
 ### Browser
 
@@ -44,7 +46,7 @@
 [![VSCode](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=for-the-badge&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
 [![VS2022](https://img.shields.io/badge/VisualStudio-672179?style=for-the-badge&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
 [![nano](https://img.shields.io/badge/-GNU%20nano-orange?style=for-the-badge&logo=nano&logoColor=ffffff)](https://www.nano-editor.org/)
-[![kate](https://img.shields.io/badge/-KDE%20Kate%20Editor-blue?style=for-the-badge&logo=kate&logoColor=ffffff)](https://kate-editor.org/zh-cn/)
+[![kate](https://img.shields.io/badge/-KDE%20Kate%20Editor-blue?style=for-the-badge&logo=kate)](https://kate-editor.org/zh-cn/)
 
 
 ### 📱 Devices
