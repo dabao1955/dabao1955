@@ -24,27 +24,27 @@
 
 ### 🤖 DevOps
 
-[![](https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&labelColor=black)](https://github.com)
-[![](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&labelColor=black)](https://docker.com)
-[![](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&labelColor=black)](https://vercel.com)
-[![](https://img.shields.io/badge/Gitea-609926?style=for-the-badge&logo=gitea&labelColor=black)](https://about.gitea.com)
-[![](https://img.shields.io/badge/Git-F54D27?style=for-the-badge&logo=git&labelColor=black)](https://git-scm.com)
-[![](https://img.shields.io/badge/ServerLess-Netlify-00C7B7?style=for-the-badge&logo=Netlify)](https://www.netlify.com/) [![](https://img.shields.io/badge/DNS-CloudFlare-F38020?style=for-the-badge&logo=CloudFlare)](https://www.cloudflare.com) 
-[![](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX)](https://nginx.org/)
+[![Github](https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&labelColor=black)](https://github.com)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&labelColor=black)](https://docker.com)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&labelColor=black)](https://vercel.com)
+[![Gitea](https://img.shields.io/badge/Gitea-609926?style=for-the-badge&logo=gitea&labelColor=black)](https://about.gitea.com)
+[![Git](https://img.shields.io/badge/Git-F54D27?style=for-the-badge&logo=git&labelColor=black)](https://git-scm.com)
+[![Netlify](https://img.shields.io/badge/ServerLess-Netlify-00C7B7?style=for-the-badge&logo=Netlify)](https://www.netlify.com/) [![](https://img.shields.io/badge/DNS-CloudFlare-F38020?style=for-the-badge&logo=CloudFlare)](https://www.cloudflare.com) 
+[![Nginx](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX)](https://nginx.org/)
 [![github actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/actions)
 
 ### Browser
 
-[![](https://img.shields.io/badge/Browser-Microsoft%20Edge-0078D7?style=for-the-badge&logo=Microsoft-Edge)](https://www.microsoft.com/zh-cn/edge/) 
+[![微软边缘](https://img.shields.io/badge/Browser-Microsoft%20Edge-0078D7?style=for-the-badge&logo=Microsoft-Edge)](https://www.microsoft.com/zh-cn/edge/) 
 ### 🚧 Language
-[![](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python)](https://www.python.org/) 
-[![](https://img.shields.io/badge/Language-HTML5-E34F26?style=for-the-badge&logo=HTML5)](https://www.w3.org/) 
+[![Python](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python)](https://www.python.org/) 
+[![W3](https://img.shields.io/badge/Language-HTML5-E34F26?style=for-the-badge&logo=HTML5)](https://www.w3.org/) 
 ### 📜 Editor
 
-[![](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=for-the-badge&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
-[![](https://img.shields.io/badge/VisualStudio-672179?style=for-the-badge&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
-[![](https://img.shields.io/badge/-GNU%20nano-orange?style=for-the-badge)](https://www.nano-editor.org/)
-[![](https://img.shields.io/badge/-KDE%20Kate%20Editor-blue?style=for-the-badge)](https://kate-editor.org/zh-cn/)
+[![VSCode](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=for-the-badge&logo=visual-studio-code&logoColor=ffffff)](https://code.visualstudio.com/)
+[![VS2022](https://img.shields.io/badge/VisualStudio-672179?style=for-the-badge&logo=VisualStudio&logoColor=ffffff)](https://visualstudio.microsoft.com/)
+[![nano](https://img.shields.io/badge/-GNU%20nano-orange?style=for-the-badge?logo=nano&logoColor=000000)](https://www.nano-editor.org/)
+[![kate](https://img.shields.io/badge/-KDE%20Kate%20Editor-blue?style=for-the-badge)](https://kate-editor.org/zh-cn/)
 
 
 ### 📱 Devices
