@@ -57,7 +57,8 @@
 [![OPPO Reno 6](https://img.shields.io/badge/-OPPO%20Reno%206-blue?style=for-the-badge)](https://www.oppo.com/cn/smartphones/series-reno/reno6/)
 ### I am a new comer on github and currently learning the Android kernel. And like linux and open source spirit
 
-![？我不是正在自己创自己吗（x](https://chuang.ac.cn/statics/stickers/12.png)
+<!--![？我不是正在自己创自己吗（x](https://chuang.ac.cn/statics/stickers/12.png)-->
+![](https://gist.github.com/3w36zj6/1b9188f8f93bfc2f7aa586769f1da320/raw/2f42fa22ffb2bc07f67fc865eb3ae430fba8a3df/kitaaaan.gif)
 
 Don't like to reinvent the wheel, like to contribute repository
 
