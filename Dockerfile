@@ -10,8 +10,6 @@ ENV \
 
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
-    sed -i "s/deb.debian.org/mirror.bfsu.edu.cn/g" "/etc/apt/sources.list" &&\
-    sed -i "s/security.debian.org/mirror.bfsu.edu.cn/g" "/etc/apt/sources.list" &&\
     apt-get update -y && apt-get install -y --no-install-recommends --no-install-suggests --fix-missing \
     fonts-noto-cjk \
     desktop-file-utils \
