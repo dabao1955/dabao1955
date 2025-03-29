@@ -33,4 +33,4 @@ RUN \
     /var/tmp/* \
     out.tar.gz && \
     fc-cache -fv && \
-    echo "tilix" > /defaults/autostart && 
+    echo "tilix" > /defaults/autostart
