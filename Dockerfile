@@ -17,6 +17,7 @@ RUN \
     wget \
     tar \
     xz-utils \
+    tilix \
     telegram-desktop && \
     wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64-v3.tar.gz -O out.tar.gz && \
     tar -xvf out.tar.gz && \
@@ -30,7 +31,6 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/* \
-    out.tar.gz &&\
-    fc-cache -fv
-
-COPY /root /
+    out.tar.gz && \
+    fc-cache -fv && \
+    echo "tilix" > /defaults/autostart && 
