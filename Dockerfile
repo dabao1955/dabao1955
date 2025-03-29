@@ -21,8 +21,7 @@ RUN \
     telegram-desktop && \
     wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64-v3.tar.gz -O out.tar.gz && \
     tar -xvf out.tar.gz && \
-    mv ClashCore clash && \
-    mv clash /usr/local/bin/ \
+    mv ./CrashCore /usr/local/bin/clash \
     wget -O /config.yaml "https://hdbi4.no-mad-world.club/link/Q4Lpte9I7HB7LNCf?clash=3" && \
     apt-get clean && \
     apt-get autoremove tar \
