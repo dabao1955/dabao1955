@@ -5,7 +5,6 @@ LABEL org.opencontainers.image.source="https://github.com/dabao1955/dabao1955"
 ENV \
     HOME="/config" \
     TITLE="dde" \
-    DISPLAY=":1" \
     ENABLE_CJK_FONT=1 \
     TZ=Asia/Shanghai 
 
