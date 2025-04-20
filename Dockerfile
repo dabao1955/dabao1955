@@ -25,7 +25,7 @@ RUN \
     wget --no-check-certificate https://repo.gxde.top/gxde-os/bixie/g/gxde-source/gxde-source_1.1.6_all.deb -O main.deb && \
     apt-get -y install ./main.deb && \
     apt-get update && \
-    apt-get install gxde-desktop && \
+    apt-get -y install gxde-desktop && \
     apt-get clean && \
     rm -rf \
     /tmp/* \
