@@ -1,5 +1,10 @@
 #include <iostream>
- 
+#include <fstream>
+#include <sstream>
+#include <filesystem>
+#include <cstdlib>
+#include <cstdio>
+
 using namespace std;
  
 double add(double num1, double num2) {
