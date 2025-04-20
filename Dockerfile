@@ -9,6 +9,7 @@ ENV \
 
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
+    sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
     apt-get update -y && apt-get install -y --no-install-recommends --no-install-suggests --fix-missing \
     fonts-noto-cjk \
     desktop-file-utils \
