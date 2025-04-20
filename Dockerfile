@@ -16,7 +16,8 @@ RUN \
     tar \
     xterm \
     xz-utils \
-    telegram-desktop && \
+    telegram-desktop \
+    ca-certificates && \
     wget --no-check-certificate https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
     tar -xvf out.tar.gz && \
     mv ./CrashCore /usr/local/bin/clash && \
