@@ -17,10 +17,10 @@ RUN \
     xterm \
     xz-utils \
     telegram-desktop && \
-    wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
+    wget --no-check-certificate https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
     tar -xvf out.tar.gz && \
     mv ./CrashCore /usr/local/bin/clash && \
-    wget https://repo.gxde.top/gxde-os/bixie/g/gxde-source/gxde-source_1.1.6_all.deb -O main.deb && \
+    wget --no-check-certificate https://repo.gxde.top/gxde-os/bixie/g/gxde-source/gxde-source_1.1.6_all.deb -O main.deb && \
     apt-get -y install ./main.deb && \
     apt-get update && \
     apt-get install gxde-desktop && \
