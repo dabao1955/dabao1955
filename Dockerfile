@@ -13,10 +13,12 @@ SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
     sed -i 's/main/main contrib non-free/' /etc/apt/sources.list.d/debian.sources && \
     apt-get update -y && apt-get install -y --no-install-recommends --no-install-suggests --fix-missing \
-    fonts-noto-cjk \
+    fonts-wqy-zenhei \
     desktop-file-utils \
     wget \
     tar \
+    nano \
+    htop \
     xterm \
     xz-utils \
     telegram-desktop \
@@ -31,8 +33,10 @@ RUN \
     apt-get clean && \
     rm -rf \
     /tmp/* \
+    *.deb \
     /var/lib/apt/lists/* \
     /var/tmp/* \
     out.tar.gz && \
     fc-cache -fv && \
-    printf "#!/bin/sh \nexec startdde\n" > /startapp.sh
+    printf "#!/bin/sh \nexec startdde\n" > /startapp.sh && \
+    sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
