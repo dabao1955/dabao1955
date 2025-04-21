@@ -13,13 +13,12 @@ SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
     apt-get update -y && apt-get install -y --no-install-recommends --no-install-suggests --fix-missing \
     fonts-noto-cjk \
-    cinnamon \
+    lxde \
     desktop-file-utils \
     wget \
     tar \
     xz-utils \
-    xvfb \
-    x11vnc \
+    tigervnc-standalone-server \
     telegram-desktop && \
     wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
     tar -xvf out.tar.gz && \
@@ -31,5 +30,5 @@ RUN \
     /var/tmp/* \
     out.tar.gz && \
     fc-cache -fv && \
-    printf "#!/bin/bash\n\nexport DISPLAY=:0\nXvfb :0 -screen 0 1280x960x24 -listen tcp -ac +extension GLX +extension RENDER & x11vnc -display :0 -forever -shared -rfbport 5900 -passwd 123456 &" > /defaults/autostart && \
-    chmod 777 /defaults/autostart 
+    printf "#!/bin/bash\n\nvncserver :0" > /defaults/autostart && \
+    chmod 777 /defaults/autostart
