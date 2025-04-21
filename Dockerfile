@@ -18,7 +18,7 @@ RUN \
     wget \
     tar \
     xz-utils \
-    xfvb \
+    xvfb \
     x11vnc \
     telegram-desktop && \
     wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
