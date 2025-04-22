@@ -13,7 +13,7 @@ SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
     apt-get update -y && apt-get install -y --no-install-recommends --no-install-suggests --fix-missing \
     fonts-noto-cjk \
-    lxde \
+    lxde* \
     desktop-file-utils \
     wget \
     tar \
