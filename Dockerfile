@@ -32,3 +32,5 @@ RUN \
     fc-cache -fv && \
     printf "#!/bin/bash\n\nvncserver :0" > /defaults/autostart && \
     chmod 777 /defaults/autostart
+
+EXPOSE 8080
