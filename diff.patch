@@ -1,0 +1,1286 @@
+--- key.js	2025-06-01 02:28:24.009639203 +0800
++++ "key (1).js"	2025-06-01 02:23:04.000000000 +0800
+@@ -8,81 +8,81 @@
+ 			
+ 		],
+ 		character: {
+-			key_kagari: ["female", "shen", 3, ["kagari_zongsi"], ["key"]],
++			key_kagari: ["female", "shen", 5, ["kagari_zongsi"], ["key"]],
+ 			key_shiki: ["female", "shen", "3/5", ["shiki_omusubi"], ["key"]],
+-			db_key_hina: ["female", "key", 3, ["hina_shenshi", "hina_xingzhi"], ["doublegroup:key:shen"]],
++			db_key_hina: ["female", "key", 5, ["hina_shenshi", "hina_xingzhi"], ["doublegroup:key:shen"]],
+ 			
+-			sp_key_yuri: ["female", "qun", 4, ["mubing", "ziqu", "diaoling"], ["border:key"]],
++			sp_key_yuri: ["female", "qun", 5, ["mubing", "ziqu", "diaoling"], ["border:key"]],
+ 			key_lucia: ["female", "key", "2/3", ["lucia_duqu", "lucia_zhenren"]],
+-			key_kyousuke: ["male", "key", 4, ["nk_shekong", "key_huanjie"]],
+-			key_yuri: ["female", "key", 3, ["yuri_xingdong", "key_huanjie", "yuri_wangxi"], ["zhu"]],
+-			key_haruko: ["female", "key", 4, ["haruko_haofang", "haruko_zhuishi"]],
+-			key_umi: ["female", "key", 3, ["umi_chaofan", "umi_lunhui", "umi_qihuan"]],
+-			key_umi2: ["female", "key", 3, [], ["unseen"]],
+-			key_rei: ["male", "key", 4, ["xiandeng", "shulv", "xisheng"]],
+-			key_komari: ["female", "key", 3, ["komari_tiankou", "komari_xueshang"]],
+-			key_yukine: ["female", "key", 3, ["yukine_wenzhou"]],
+-			key_yusa: ["female", "key", 3, ["yusa_yanyi", "yusa_misa", "dualside"], ["dualside:key_misa"]],
+-			key_misa: ["female", "key", 3, ["misa_yehuo", "misa_yusa", "dualside"], ["unseen"]],
++			key_kyousuke: ["male", "key", 5, ["nk_shekong", "key_huanjie"]],
++			key_yuri: ["female", "key", 5, ["yuri_xingdong", "key_huanjie", "yuri_wangxi"], ["zhu"]],
++			key_haruko: ["female", "key", 5, ["haruko_haofang", "haruko_zhuishi"]],
++			key_umi: ["female", "key", 5, ["umi_chaofan", "umi_lunhui", "umi_qihuan"]],
++			key_umi2: ["female", "key", 5, [], ["unseen"]],
++			key_rei: ["male", "key", 5, ["xiandeng", "shulv", "xisheng"]],
++			key_komari: ["female", "key", 5, ["komari_tiankou", "komari_xueshang"]],
++			key_yukine: ["female", "key", 5, ["yukine_wenzhou"]],
++			key_yusa: ["female", "key", 5, ["yusa_yanyi", "yusa_misa", "dualside"], ["dualside:key_misa"]],
++			key_misa: ["female", "key", 5, ["misa_yehuo", "misa_yusa", "dualside"], ["unseen"]],
+ 			key_masato: ["male", "key", "4/8", ["masato_baoquan"]],
+-			key_iwasawa: ["female", "key", 3, ["iwasawa_yinhang", "iwasawa_mysong"]],
+-			key_kengo: ["male", "key", 4, ["kengo_weishang", "kengo_guidui"]],
+-			key_yoshino: ["male", "key", 4, ["yoshino_jueyi"]],
+-			key_yui: ["female", "key", 3, ["yui_jiang", "yui_lieyin", "yui_takaramono"]],
+-			key_tsumugi: ["female", "key", 3, ["tsumugi_mugyu", "tsumugi_huilang"]],
+-			key_saya: ["female", "key", 3, ["saya_shouji", "saya_powei"]],
+-			key_harukakanata: ["female", "key", 3, ["haruka_shuangche"]],
+-			key_inari: ["female", "key", 2, ["inari_baiwei", "inari_huhun"]],
+-			key_shiina: ["female", "key", 3, ["shiina_qingshen", "shiina_feiyan"]],
++			key_iwasawa: ["female", "key", 5, ["iwasawa_yinhang", "iwasawa_mysong"]],
++			key_kengo: ["male", "key", 5, ["kengo_weishang", "kengo_guidui"]],
++			key_yoshino: ["male", "key", 5, ["yoshino_jueyi"]],
++			key_yui: ["female", "key", 5, ["yui_jiang", "yui_lieyin", "yui_takaramono"]],
++			key_tsumugi: ["female", "key", 5, ["tsumugi_mugyu", "tsumugi_huilang"]],
++			key_saya: ["female", "key", 5, ["saya_shouji", "saya_powei"]],
++			key_harukakanata: ["female", "key", 5, ["haruka_shuangche"]],
++			key_inari: ["female", "key", 5, ["inari_baiwei", "inari_huhun"]],
++			key_shiina: ["female", "key", 5, ["shiina_qingshen", "shiina_feiyan"]],
+ 			key_sunohara: [
+ 				"double",
+ 				"key",
+ 				"3/3/2",
+ 				["sunohara_chengshuang", "sunohara_tiaoyin", "sunohara_jianren"],
+ 			],
+-			key_rin: ["female", "key", 3, ["rin_baoqiu"]],
+-			key_sasami: ["female", "key", 3, ["sasami_miaobian"]],
+-			key_akane: ["female", "key", 3, ["akane_jugu", "akane_quanqing", "akane_yifu"], ["zhu"]],
++			key_rin: ["female", "key", 5, ["rin_baoqiu"]],
++			key_sasami: ["female", "key", 5, ["sasami_miaobian"]],
++			key_akane: ["female", "key", 5, ["akane_jugu", "akane_quanqing", "akane_yifu"], ["zhu"]],
+ 			key_doruji: ["female", "key", 16, ["doruji_feiqu"]],
+-			key_yuiko: ["female", "key", 3, ["yuiko_fenglun", "yuiko_dilve"]],
+-			key_riki: ["double", "key", 3, ["riki_spwenji", "riki_nvzhuang", "riki_mengzhong"]],
+-			key_hisako: ["female", "key", 3, ["hisako_yinbao", "hisako_zhuanyun"]],
+-			key_hinata: ["male", "key", 4, ["hinata_qiulve", "hinata_ehou"]],
+-			key_noda: ["male", "key", 4, ["noda_fengcheng", "noda_xunxin"]],
+-			key_tomoya: ["male", "key", 4, ["tomoya_shangxian", "tomoya_wangjin"]],
+-			key_nagisa: ["female", "key", 3, ["nagisa_tiandu", "nagisa_fuxin"]],
+-			key_ayato: ["male", "key", 3, ["ayato_jianshen", "ayato_zonghuan"]],
+-			key_ao: ["female", "key", 3, ["ao_xishi", "ao_kuihun", "ao_shixin"]],
++			key_yuiko: ["female", "key", 5, ["yuiko_fenglun", "yuiko_dilve"]],
++			key_riki: ["double", "key", 5, ["riki_spwenji", "riki_nvzhuang", "riki_mengzhong"]],
++			key_hisako: ["female", "key", 5, ["hisako_yinbao", "hisako_zhuanyun"]],
++			key_hinata: ["male", "key", 5, ["hinata_qiulve", "hinata_ehou"]],
++			key_noda: ["male", "key", 5, ["noda_fengcheng", "noda_xunxin"]],
++			key_tomoya: ["male", "key", 5, ["tomoya_shangxian", "tomoya_wangjin"]],
++			key_nagisa: ["female", "key", 5, ["nagisa_tiandu", "nagisa_fuxin"]],
++			key_ayato: ["male", "key", 5, ["ayato_jianshen", "ayato_zonghuan"]],
++			key_ao: ["female", "key", 5, ["ao_xishi", "ao_kuihun", "ao_shixin"]],
+ 			key_yuzuru: ["male", "key", 5, ["yuzuru_wuxin", "yuzuru_deyi"]],
+-			sp_key_kanade: ["female", "key", 3, ["kanade_mapo", "kanade_benzhan"]],
+-			key_mio: ["female", "key", 3, ["mio_tuifu", "mio_tishen"]],
+-			key_midori: ["female", "key", 3, ["midori_nonghuan", "midori_tishen"]],
+-			key_kyoko: ["female", "key", 3, ["kyoko_juwu", "kyoko_zhengyi"]],
+-			key_shizuru: ["female", "key", 3, ["shizuru_nianli", "shizuru_benzhan"]],
+-			key_shiorimiyuki: ["female", "key", 3, ["shiorimiyuki_banyin", "shiorimiyuki_tingxian"]],
+-			key_miki: ["female", "key", 3, ["miki_shenqiang", "miki_huanmeng", "miki_zhiluo"]],
++			sp_key_kanade: ["female", "key", 5, ["kanade_mapo", "kanade_benzhan"]],
++			key_mio: ["female", "key", 5, ["mio_tuifu", "mio_tishen"]],
++			key_midori: ["female", "key", 5, ["midori_nonghuan", "midori_tishen"]],
++			key_kyoko: ["female", "key", 5, ["kyoko_juwu", "kyoko_zhengyi"]],
++			key_shizuru: ["female", "key", 5, ["shizuru_nianli", "shizuru_benzhan"]],
++			key_shiorimiyuki: ["female", "key", 5, ["shiorimiyuki_banyin", "shiorimiyuki_tingxian"]],
++			key_miki: ["female", "key", 5, ["miki_shenqiang", "miki_huanmeng", "miki_zhiluo"]],
+ 			key_shiori: ["female", "key", "2/3", ["shiori_huijuan"]],
+ 			key_kaori: ["female", "key", "3/4", ["kaori_siyuan"]],
+-			key_akiko: ["female", "key", 3, ["akiko_dongcha"]],
+-			key_abyusa: ["female", "key", 3, ["abyusa_jueqing", "abyusa_dunying"]],
+-			key_godan: ["male", "key", 6, ["godan_yuanyi", "godan_feiqu", "godan_xiaoyuan"]],
+-			key_yuu: ["male", "key", 3, ["yuu_lveduo"]],
+-			key_ryoichi: ["male", "key", 4, ["ryoichi_baoyi", "ryoichi_tuipi"]],
+-			key_kotori: ["female", "key", 3, ["kotori_yumo", "kotori_huazhan"]],
+-			key_jojiro: ["male", "key", 4, ["jojiro_shensu", "jojiro_shunying"]],
+-			key_shiroha: ["female", "key", 3, ["shiroha_yuzhao", "shiroha_guying", "shiroha_jiezhao"]],
+-			key_shizuku: ["female", "key", 3, ["shizuku_sizhi", "shizuku_biyi", "shizuku_sanhua"]],
+-			key_hiroto: ["male", "key", 3, ["hiroto_huyu", "hiroto_tuolao"]],
+-			key_sakuya: ["male", "key", 3, ["youlong", "luanfeng", "sakuya_junbu"]],
+-			key_youta: ["male", "key", 4, []],
++			key_akiko: ["female", "key", 5, ["akiko_dongcha"]],
++			key_abyusa: ["female", "key", 5, ["abyusa_jueqing", "abyusa_dunying"]],
++			key_godan: ["male", "key", 7, ["godan_yuanyi", "godan_feiqu", "godan_xiaoyuan"]],
++			key_yuu: ["male", "key", 5, ["yuu_lveduo"]],
++			key_ryoichi: ["male", "key", 5, ["ryoichi_baoyi", "ryoichi_tuipi"]],
++			key_kotori: ["female", "key", 5, ["kotori_yumo", "kotori_huazhan"]],
++			key_jojiro: ["male", "key", 5, ["jojiro_shensu", "jojiro_shunying"]],
++			key_shiroha: ["female", "key", 5, ["shiroha_yuzhao", "shiroha_guying", "shiroha_jiezhao"]],
++			key_shizuku: ["female", "key", 5, ["shizuku_sizhi", "shizuku_biyi", "shizuku_sanhua"]],
++			key_hiroto: ["male", "key", 5, ["hiroto_huyu", "hiroto_tuolao"]],
++			key_sakuya: ["male", "key", 5, ["youlong", "luanfeng", "sakuya_junbu"]],
++			key_youta: ["male", "key", 5, []],
+ 			key_rumi: ["female", "key", "3/4", ["rumi_shuwu"]],
+-			key_chihaya: ["female", "key", 3, ["chihaya_liewu", "chihaya_youfeng"]],
+-			key_yukito: ["male", "key", 4, ["yukito_kongwu", "yukito_yaxiang"]],
+-			key_crow: ["male", "key", 4, [], ["unseen"]],
+-			key_asara: ["female", "key", 3, ["asara_shelu", "asara_yingwei"]],
+-			key_kotomi: ["female", "key", 3, ["kotomi_qinji", "kotomi_chuanxiang"]],
+-			key_mia: ["female", "key", 3, ["mia_shihui", "mia_qianmeng"]],
+-			key_kano: ["female", "key", 3, ["kano_liezhen", "kano_poyu"]],
++			key_chihaya: ["female", "key", 5, ["chihaya_liewu", "chihaya_youfeng"]],
++			key_yukito: ["male", "key", 5, ["yukito_kongwu", "yukito_yaxiang"]],
++			key_crow: ["male", "key", 5, [], ["unseen"]],
++			key_asara: ["female", "key", 5, ["asara_shelu", "asara_yingwei"]],
++			key_kotomi: ["female", "key", 5, ["kotomi_qinji", "kotomi_chuanxiang"]],
++			key_mia: ["female", "key", 5, ["mia_shihui", "mia_qianmeng"]],
++			key_kano: ["female", "key", 5, ["kano_liezhen", "kano_poyu"]],
+ 			db_key_liyingxia: [
+ 				"female",
+ 				"shu",
+@@ -90,25 +90,25 @@
+ 				["liyingxia_sanli", "liyingxia_zhenjun", "liyingxia_wumai"],
+ 				["doublegroup:shu:key"],
+ 			],
+-			key_erika: ["female", "key", "3/3/2", ["erika_shisong", "erika_yousheng"]],
+-			key_satomi: ["female", "key", 3, ["satomi_luodao", "satomi_daohai"]],
+-			key_iriya: ["female", "key", 3, ["iriya_yinji", "iriya_haozhi"]],
+-			key_fuuko: ["female", "key", 3, ["fuuko_xingdiao", "fuuko_chuanyuan"]],
++			key_erika: ["female", "key", "5/5/6", ["erika_shisong", "erika_yousheng"]],
++			key_satomi: ["female", "key", 5, ["satomi_luodao", "satomi_daohai"]],
++			key_iriya: ["female", "key", 5, ["iriya_yinji", "iriya_haozhi"]],
++			key_fuuko: ["female", "key", 5, ["fuuko_xingdiao", "fuuko_chuanyuan"]],
+ 
+-			key_kud: ["female", "key", 3, ["kud_qiaoshou", "kud_buhui"]],
+-			key_misuzu: ["female", "key", 3, ["misuzu_hengzhou", "misuzu_nongyin", "misuzu_zhongxing"]],
+-			key_kamome: ["female", "key", 3, ["kamome_yangfan", "kamome_huanmeng", "kamome_jieban"]],
+-			key_nao: ["female", "key", 3, ["nao_duyin", "nao_wanxin", "nao_shouqing"]],
+-			key_yuuki: ["female", "key", 3, ["yuuki_yicha"]],
+-			key_kotarou: ["male", "key", 3, ["kotarou_rewrite", "kotarou_aurora"]],
+-			key_tenzen: ["male", "key", 4, ["tenzen_fenghuan", "tenzen_retianquan"]],
+-			key_kyouko: ["female", "key", 3, ["kyouko_rongzhu", "kyouko_gongmian"]],
+-			key_kyou: ["female", "key", 3, ["kyou_zhidian", "kyou_duanfa"]],
+-			key_seira: ["female", "key", 3, ["seira_xinghui", "seira_yuanying"]],
+-			key_kiyu: ["female", "key", 3, ["kiyu_yuling", "kiyu_rexianyu"]],
+-			key_tomoyo: ["female", "key", 4, ["tomoyo_wuwei", "tomoyo_zhengfeng"]],
+-			key_minagi: ["female", "key", 3, ["minagi_peiquan", "minagi_huanliu"]],
+-			key_michiru: ["female", "key", 3, ["michiru_sheyuan"]],
++			key_kud: ["female", "key", 5, ["kud_qiaoshou", "kud_buhui"]],
++			key_misuzu: ["female", "key", 5, ["misuzu_hengzhou", "misuzu_nongyin", "misuzu_zhongxing"]],
++			key_kamome: ["female", "key", 5, ["kamome_yangfan", "kamome_huanmeng", "kamome_jieban"]],
++			key_nao: ["female", "key", 5, ["nao_duyin", "nao_wanxin", "nao_shouqing"]],
++			key_yuuki: ["female", "key", 5, ["yuuki_yicha", "yuuki_wuxin"]],
++			key_kotarou: ["male", "key", 5, ["kotarou_rewrite", "kotarou_aurora"]],
++			key_tenzen: ["male", "key", 5, ["tenzen_fenghuan", "tenzen_retianquan"]],
++			key_kyouko: ["female", "key", 5, ["kyouko_rongzhu", "kyouko_gongmian"]],
++			key_kyou: ["female", "key", 5, ["kyou_zhidian", "kyou_duanfa"]],
++			key_seira: ["female", "key", 5, ["seira_xinghui", "seira_yuanying"]],
++			key_kiyu: ["female", "key", 5, ["kiyu_yuling", "kiyu_rexianyu"]],
++			key_tomoyo: ["female", "key", 5, ["tomoyo_wuwei", "tomoyo_zhengfeng"]],
++			key_minagi: ["female", "key", 5, ["minagi_peiquan", "minagi_huanliu"]],
++			key_michiru: ["female", "key", 5, ["michiru_sheyuan", "michiru_huzhu"]],
+ 			
+ 		},
+ 		characterFilter: {
+@@ -573,11 +573,11 @@
+ 				trigger: { player: ["phaseUseBegin", "phaseUseEnd"] },
+ 				frequent: true,
+ 				filter(event, player) {
+-					return player.group == "shen";
++					return player.group == "key";
+ 				},
+ 				content() {
+ 					"step 0";
+-					player.draw(2).gaintag = ["hina_shenshi"];
++					player.draw(4).gaintag = ["hina_shenshi"];
+ 					player.addSkill("hina_shenshi_yingbian");
+ 					"step 1";
+ 					var cards = player.getCards("h", function (card) {
+@@ -824,7 +824,7 @@
+ 					return player.countCards("h") < 17;
+ 				},
+ 				content() {
+-					player.drawTo(17).gaintag = ["iriya_yinji_tag"];
++					player.draw(17).gaintag = ["iriya_yinji_tag"];
+ 					player.addSkill("iriya_yinji_tag");
+ 				},
+ 				subSkill: {
+@@ -1339,7 +1339,7 @@
+ 				content1() {
+ 					"step 0";
+ 					player
+-						.chooseTarget([1, 2], "是否令至多两名角色各摸一张牌？")
++						.chooseTarget([1, 2], "是否令至多两名角色各摸两张牌？")
+ 						.set("ai", function (target) {
+ 							var player = _status.event.player,
+ 								att = get.attitude(player, target);
+@@ -1350,7 +1350,7 @@
+ 					if (result.bool) {
+ 						var targets = result.targets.sortBySeat();
+ 						player.line(targets);
+-						game.asyncDraw(targets);
++						game.asyncDraw(targets, 2);
+ 						game.delayex();
+ 					}
+ 				},
+@@ -1488,14 +1488,14 @@
+ 					"step 2";
+ 					player
+ 						.chooseTarget(
+-							"是否对一名目标角色造成1点火属性伤害？",
++							"是否对一名目标角色造成2点火属性伤害？",
+ 							function (card, player, target) {
+ 								return _status.event.getParent().targets.includes(target);
+ 							}
+ 						)
+ 						.set("ai", function (target) {
+ 							var player = _status.event.player;
+-							return get.damageEffect(target, player, player, "fire");
++							return get.damageEffect(target, player, player, "fire", 2);
+ 						});
+ 					"step 3";
+ 					if (result.bool) {
+@@ -1524,7 +1524,7 @@
+ 						var target = result.targets[0];
+ 						event.target = target;
+ 						player.line(target, "thunder");
+-						target.damage("thunder", 2);
++						target.damage("thunder", 4);
+ 						target.turnOver();
+ 					} else event.finish();
+ 					"step 2";
+@@ -1643,7 +1643,7 @@
+ 				lose: false,
+ 				delay: false,
+ 				promptfunc: () =>
+-					"出牌阶段，你可以赠予一张“米券”，然后执行一项本回合内未被选择过的效果：⒈对其造成1点伤害；⒉摸两张牌；⒊弃置其的两张牌；⒋亮出牌堆顶的一张牌，然后你可以使用之。",
++					"出牌阶段，你可以赠予一张“米券”，然后执行一项本回合内未被选择过的效果：⒈对其造成2点伤害；⒉摸四张牌；⒊弃置其的两张牌；⒋亮出牌堆顶的一张牌，然后你可以使用之。",
+ 				check: (card) => {
+ 					const player = _status.event.player;
+ 					return get.type(card) == "equip" && game.hasPlayer(current => player.canGift(card, current, true) && !current.refuseGifts(card, player) && get.effect(current, card, player, player) > 0) ? 2 : 1 + Math.random();
+@@ -1662,8 +1662,8 @@
+ 									"配券：请选择一项执行",
+ 									[
+ 										[
+-											["damage", "选项一：对" + yukito + "造成1点伤害"],
+-											["draw", "选项二：摸两张牌"],
++											["damage", "选项一：对" + yukito + "造成2点伤害"],
++											["draw", "选项二：摸四张牌"],
+ 											["discard", "选项三：弃置" + yukito + "的两张牌"],
+ 											["use", "选项四：亮出牌堆顶的一张牌，然后可以使用之"],
+ 										],
+@@ -1699,10 +1699,10 @@
+ 					player.addTempSkill("minagi_peiquan_yukito");
+ 					switch (result.links[0]) {
+ 						case "damage":
+-							target.damage("nocard");
++							target.damage(2, "nocard");
+ 							break;
+ 						case "draw":
+-							player.draw(2);
++							player.draw(4);
+ 							break;
+ 						case "discard":
+ 							player.discardPlayerCard(target, 2, "he", true);
+@@ -1851,7 +1851,8 @@
+ 				charlotte: true,
+ 				enable: "chooseToUse",
+ 				filter(event, player) {
+-					if (player.hasSkill("michiru_sheyuan_round")) return false;
++				    if (player.countMark('minagi_tag') > 0) return false;
++					if (player.hasSkill("michiru_sheyuan_turn")) return false;
+ 					var hs = player.getCards("h");
+ 					if (!hs.length) return false;
+ 					for (var i of hs) {
+@@ -1875,7 +1876,8 @@
+ 				hiddenCard(player, name) {
+ 					var type = get.type(name);
+ 					if (type != "basic" && type != "trick") return false;
+-					if (player.hasSkill("michiru_sheyuan_round")) return false;
++					if (player.countMark('minagi_tag') > 0) return false;
++					if (player.hasSkill("michiru_sheyuan_turn")) return false;
+ 					var hs = player.getCards("h");
+ 					if (!hs.length) return false;
+ 					if (_status.connectMode) return true;
+@@ -1910,9 +1912,9 @@
+ 							name: button.link[2],
+ 							nature: button.link[3],
+ 						};
+-						if (_status.event.getParent().type == "phase")
+-							return player.getUseValue(card, null, true);
+-						return 1;
++						if (_status.event.getParent().type == "phase") return 1;
++							//return player.getUseValue(card, null, true);
++						return player.getUseValue(card, null, true);
+ 					},
+ 					backup(links, player) {
+ 						return {
+@@ -1923,8 +1925,18 @@
+ 							filterCard: true,
+ 							position: "h",
+ 							selectCard: -1,
++							ai: {
++                                basic: {
++                                    useful: [6,4],
++                                    value: [6,4],
++                                },
++                                result: {
++                                    player: 1,
++                                },
++                                order: 7,
++                            },
+ 							onuse(result, player) {
+-								player.addTempSkill("michiru_sheyuan_round", "roundStart");
++								player.addTempSkill("michiru_sheyuan_turn", "roundStart");
+ 							},
+ 						};
+ 					},
+@@ -1941,6 +1953,7 @@
+ 					respondSha: true,
+ 					respondShan: true,
+ 					skillTagFilter(player, tag, arg) {
++					    if (player.countMark('minagi_tag') > 0) return false;
+ 						return lib.skill.michiru_sheyuan.hiddenCard(player, "s" + tag.slice(8));
+ 					},
+ 					order: 1,
+@@ -1952,7 +1965,7 @@
+ 					},
+ 				},
+ 				subSkill: {
+-					round: {
++					turn: {
+ 						charlotte: true,
+ 						trigger: { player: "useCardAfter" },
+ 						forced: true,
+@@ -1967,6 +1980,51 @@
+ 					backup: {},
+ 				},
+ 			},
++			
++            michiru_huzhu: {
++                charlotte: true,
++                forced: true,
++                group: ['michiru_huzhu_start', 'michiru_huzhu_count', 'michiru_huzhu_use'],
++                subSkill: {
++                    start: {
++                        trigger: {
++                            global: 'gameStart'
++                        },
++                        forced: true,
++                        content() {
++                            player.addMark('minagi_tag', 1);
++                        }
++                    },
++                    count: {
++                        trigger: {
++                            player: 'cardTypeChange'
++                        },
++                        forced: true,
++                        filter(event, player) {
++                            return true;
++                        },
++                        content() {
++                            player.addMark('minagi_tag', 1);
++                            player.recover();
++                        }
++                    },
++                    use: {
++                        trigger: {
++                            player: 'useCard'
++                        },
++                        forced: true,
++                        filter(event, player) {
++                            return get.type(event.card) == 'basic' && player.countMark('minagi_tag') > 0;
++                        },
++                        content() {
++                            player.removeMark('minagi_tag', 1);
++                            var num = player.countMark('minagi_tag');
++                            if (num > 0) player.draw(num);
++                        }
++                    }
++                }
++            },
++			
+ 			//坂上智代
+ 			tomoyo_wuwei: {
+ 				enable: ["chooseToUse", "chooseToRespond"],
+@@ -2836,7 +2894,7 @@
+ 							.set("filterButton", function (button) {
+ 								return get.name(button.link) == "shan";
+ 							});
+-					} else if (player.countCards("he") > 0) player.chooseToDiscard("he", true);
++					} else if (player.countCards("he") > 0) player.draw(2);
+ 				},
+ 			},
+ 			satomi_daohai: {
+@@ -2912,7 +2970,7 @@
+ 					return false;
+ 				},
+ 				content() {
+-					player.draw();
++					player.draw(2);
+ 				},
+ 				mod: {
+ 					maxHandcard(player, num) {
+@@ -2982,13 +3040,13 @@
+ 								return current.isAlive();
+ 							});
+ 							player.line(list, "green");
+-							game.asyncDraw(list, 3);
++							game.asyncDraw(list, 5);
+ 							"step 1";
+ 							game.delayx();
+ 						},
+ 					},
+ 					fail: {
+-						trigger: { global: "damageEnd" },
++						trigger: { global: "dyingBegin" },
+ 						forced: true,
+ 						filter(event, player) {
+ 							return (
+@@ -3019,7 +3077,7 @@
+ 									get.prompt("erika_yousheng"),
+ 									[1, 2],
+ 									lib.filter.notMe,
+-									"选择至多两名其他角色。你减2点体力上限并获得3点护甲。"
++									"选择至多两名其他角色。你增加点体力上限，回复4点体力，摸4张牌并获得5点护甲。"
+ 								)
+ 								.set("ai", function (ruka) {
+ 									return -1;
+@@ -3029,8 +3087,10 @@
+ 						async content(event, trigger, player) {
+ 							player.awakenSkill("erika_yousheng_mamori");
+ 							player.markAuto("erika_yousheng", event.targets);
+-							await player.loseMaxHp(2);
+-							await player.changeHujia(3);
++							await player.gainMaxHp(4);
++						    player.draw(4);
++						    player.recover(4);
++							await player.changeHujia(16);
+ 						},
+ 					},
+ 					ruka: {
+@@ -3151,7 +3211,7 @@
+ 				trigger: { global: "roundStart" },
+ 				filter(event, player) {
+ 					return (
+-						player.group == "shu" &&
++						player.group == "key" &&
+ 						(player.getStorage("liyingxia_wumai").length < 4 ||
+ 							game.hasPlayer((current) => current.isDamaged()))
+ 					);
+@@ -3163,7 +3223,7 @@
+ 						const { result } = await player
+ 							.chooseControl(list, "cancel2")
+ 							.set("prompt", get.prompt("liyingxia_wumai"))
+-							.set("prompt2", "获得一个技能直到本轮结束");
++							.set("prompt2", "获得一个技能");
+ 						if (result.control !== "cancel2") {
+ 							event.result = {
+ 								bool: true,
+@@ -3179,7 +3239,7 @@
+ 							game.countPlayer((current) => current.isDamaged())
+ 						);
+ 						const { result } = await player.chooseBool(
+-							get.prompt("liyingxia_wumai") + "（可摸" + get.cnNumber(num) + "张牌）"
++							get.prompt("liyingxia_wumai") + "（可摸" + get.cnNumber(num+2) + "张牌）"
+ 						);
+ 						if (result.bool) {
+ 							event.result = {
+@@ -3196,12 +3256,13 @@
+ 					const result = event.cost_data;
+ 					if (result.type === "addSkill") {
+ 						player.markAuto("liyingxia_wumai", [result.skill]);
+-						player.addTempSkills(result.skill, "roundStart");
++						player.addSkills(result.skill, "roundStart");
++						player.gainMaxHp();
+ 					} else if (result.type === "drawCards") {
+-						player.draw(result.num);
++						player.draw(result.num+2);
+ 					}
+ 				},
+-				derivation: ["bazhen", "rejizhi", "reguanxing", "youlong"],
++				derivation: ['shizuru_nianli','kotomi_chuanxiang','nao_duyin','sheyan','hisako_yinbao','fanghun','iwasawa_mysong','xuehen','jiufa'],
+ 			},
+ 			//雾岛佳乃
+ 			kano_liezhen: {
+@@ -3259,7 +3320,7 @@
+ 							_status.renku.length = 0;
+ 							game.updateRenku();
+ 							await player.gain(cards, "gain2", "fromRenku");
+-						} else player.draw(2);
++						} else player.draw(4);
+ 					} else {
+ 						player.chooseUseTarget(result.links[0][2], true);
+ 					}
+@@ -3598,8 +3659,8 @@
+ 				},
+ 				content() {
+ 					player.awakenSkill("kyou_duanfa");
+-					if (player.countCards("h") > 0) player.chooseToDiscard("h", true, player.countCards("h"));
+-					player.recover();
++					player.recover(4);
++					player.draw(5);
+ 					trigger.cancel();
+ 					player.addTempSkill("kyou_duanfa_draw", {
+ 						player: "phaseBeginStart",
+@@ -3615,7 +3676,7 @@
+ 							return get.type(event.card, null, false) == "trick" && get.tag(event.card, "damage") > 0;
+ 						},
+ 						content() {
+-							player.draw();
++							player.chooseToDiscard("h", true, 1);
+ 						},
+ 					},
+ 				},
+@@ -4491,6 +4552,74 @@
+ 					}
+ 				},
+ 			},
++			
++			yuuki_wuxin: {
++                // 转换技标记
++                mark: true,
++                zhuanhuanji: true,
++                // 锁定技标记
++                forced: true,
++                // 阴阳状态记录
++                marktext: "☯",
++                intro: {
++                    content: function(storage) {
++                        return storage ? '阳：别人对你造成伤害时，取消之' : '阴：你对别人造成伤害时，取消之';
++                    }
++                },
++                // 初始化为阴
++                init: function(player) {
++                    player.storage.yuuki_wuxin = false;
++                },
++                // 准备阶段转换阴阳
++                trigger: {
++                    player: 'phaseZhunbeiBegin'
++                },
++                content: function() {
++                    player.storage.yuuki_wuxin = !player.storage.yuuki_wuxin;
++                    player.markSkill('yuuki_wuxin');
++                },
++                // 伤害取消效果
++                group: ['yuuki_wuxin_damage', 'yuuki_wuxin_draw'],
++                subSkill: {
++                    damage: {
++                        trigger: {
++                            source: 'damageBegin4',
++                            player: 'damageBegin4'
++                        },
++                        forced: true,
++                        filter: function(event, player) {
++                            // 阴状态下，自己造成伤害时触发
++                            if (!player.storage.yuuki_wuxin && event.player != player) return true;
++                            // 阳状态下，受到伤害时触发
++                            if (player.storage.yuuki_wuxin && event.player == player) return true;
++                            return false;
++                        },
++                        content: function() {
++                            trigger.cancel();
++                        },
++                    },
++                    draw: {
++                        trigger: {
++                            global: 'phaseJieshuBegin'
++                        },
++                        forced: true,
++                        filter: function(event, player) {
++                            // 检查当前回合角色是否造成过伤害
++                            return event.player.getHistory('sourceDamage').length > 0;
++                        },
++                        content: function() {
++                            // 计算当前回合角色造成的总伤害数
++                            let totalDamage = 0;
++                            trigger.player.getHistory('sourceDamage').forEach(evt => {
++                                totalDamage += evt.num || 1;
++                            });
++                            if(totalDamage > 0) {
++                                player.draw(totalDamage);
++                            }
++                        }
++                    }
++                },
++            },
+ 			kotomi_qinji: {
+ 				trigger: { player: "phaseUseBegin" },
+ 				filter(event, player) {
+@@ -5189,8 +5318,7 @@
+ 					),
+ 				filterCard: (card, player) => get.type(card) == "equip" && player.canRecast(card),
+ 				check(card) {
+-					if (get.position(card) == "e") return 0.5 - get.value(card, get.player());
+-					if (!get.player().hasEquipableSlot(get.subtype(card))) return 5;
++					if (!_status.event.player.hasEquipableSlot(get.subtype(card))) return 5;
+ 					return 3 - get.value(card);
+ 				},
+ 				content() {
+@@ -6205,10 +6333,11 @@
+ 						player.storage.shiroha_jiezhao = true;
+ 						player.gainMaxHp();
+ 						player.recover();
+-						var list = ["umi_chaofan", "ao_xishi", "tsumugi_mugyu", "kamome_jieban"];
+-						var skill = list.randomGet();
+-						player.flashAvatar("shiroha_jiezhao", "key_" + skill.split("_")[0]);
+-						await player.addSkills(skill);
++						player.addSkill('umi_chaofan');
++						player.addSkill('ao_xishi');
++						player.addSkill('tsumugi_mugyu');
++						player.addSkill('kamome_jieban');
++						player.addSkill('mia_shihui');
+ 					}
+ 				},
+ 				ai: {
+@@ -7749,7 +7878,7 @@
+ 					if (["damage", "recover"].includes(event.name)) return event.num > 0;
+ 					var num = player.countMark("misuzu_hengzhou");
+ 					if (event.name == "phaseDraw") return num > 0 && !event.numFixed;
+-					return num > 3;
++					return num > 5;
+ 				},
+ 				content() {
+ 					var num = player.countMark("misuzu_hengzhou");
+@@ -7800,6 +7929,7 @@
+ 					player.logSkill("misuzu_nongyin");
+ 					player.$throw(event.result.cards);
+ 					player.addJudge({ name: "lebu" }, event.result.cards);
++					player.draw(4);
+ 					event.result.card.cards = [];
+ 					event.result.cards = [];
+ 					delete event.result.skill;
+@@ -7827,7 +7957,7 @@
+ 				},
+ 				async cost(event, trigger, player) {
+ 					event.result = await player
+-						.chooseTarget(get.prompt("misuzu_zhongxing"), "令一名角色选择摸两张牌或回复1点体力")
++						.chooseTarget(get.prompt("misuzu_zhongxing"), "令一名角色选择摸四张牌或回复2点体力")
+ 						.set("ai", function (card) {
+ 							return get.attitude(_status.event.player, card);
+ 						})
+@@ -7837,7 +7967,7 @@
+ 					var target = event.targets[0];
+ 					player.logSkill("misuzu_zhongxing", target);
+ 					player.addTempSkill("misuzu_zhongxing_haruko");
+-					target.chooseDrawRecover(2, true);
++					target.chooseDrawRecover(4, true);
+ 				},
+ 			},
+ 			misuzu_zhongxing_haruko: { charlotte: true },
+@@ -7872,8 +8002,8 @@
+ 					return evt && evt.player == player && evt.es && evt.es.length;
+ 				},
+ 				content() {
+-					if (trigger.getl) player.draw(2 * trigger.getl(player).es.length);
+-					else player.equip(game.createCard2("kamome_suitcase", "spade", 1));
++					if (trigger.getl) player.draw(4 * trigger.getl(player).es.length);
++					else player.equip(game.createCard2("kamome_suitcase", "spade", 2));
+ 				},
+ 				ai: {
+ 					noe: true,
+@@ -8243,11 +8373,11 @@
+ 				trigger: { player: "phaseUseBegin" },
+ 				async cost(event, trigger, player) {
+ 					const { control, index } = await player
+-						.chooseControl("一张", "两张", "三张", "cancel2")
++						.chooseControl("一张", "两张", "三张", "四张", "cancel2")
+ 						.set("prompt", get.prompt2("shiorimiyuki_tingxian"))
+ 						.set("ai", function () {
+ 							var player = _status.event.player;
+-							var max = Math.min(player.hp + 1, player.maxHp);
++							var max = Math.min(player.hp + 4, player.maxHp);
+ 							var min = Math.min(Math.max(max - 2, max - player.hp), 3);
+ 							if (min) return min - 1;
+ 							return 3;
+@@ -8488,8 +8618,8 @@
+ 				async cost(event, trigger, player) {
+ 					event.type = get.type(trigger.card) == "basic";
+ 					var prompt = event.type
+-						? "令一名角色摸两张牌或弃置两张牌"
+-						: "令一名角色回复1点体力或对其造成1点伤害";
++						? "令一名角色摸四张牌或弃置四张牌"
++						: "令一名角色回复2点体力或对其造成2点伤害";
+ 					event.result = await player
+ 						.chooseTarget(get.prompt("shizuru_benzhan"), prompt)
+ 						.set("ai", function (target) {
+@@ -8516,10 +8646,10 @@
+ 					var list;
+ 					if (event.type) {
+ 						if (!target.countCards("he")) event._result = { index: 0 };
+-						else list = ["令" + trans + "摸两张牌", "令" + trans + "弃置两张牌"];
++						else list = ["令" + trans + "摸四张牌", "令" + trans + "弃置四张牌"];
+ 					} else {
+ 						if (target.isHealthy()) event._result = { index: 1 };
+-						else list = ["令" + trans + "回复1点体力", "对" + trans + "造成1点伤害"];
++						else list = ["令" + trans + "回复2点体力", "对" + trans + "造成2点伤害"];
+ 					}
+ 					player
+ 						.chooseControl()
+@@ -8540,11 +8670,11 @@
+ 					"step 1";
+ 					player.addExpose(0.2);
+ 					if (event.type) {
+-						if (result.index == 0) target.draw(2);
+-						else target.chooseToDiscard(2, "he", true);
++						if (result.index == 0) target.draw(4);
++						else target.chooseToDiscard(4, "he", true);
+ 					} else {
+-						if (result.index == 0) target.recover();
+-						else target.damage();
++						if (result.index == 0) target.recover(2);
++						else target.damage(2);
+ 					}
+ 				},
+ 			},
+@@ -8786,10 +8916,10 @@
+ 				trigger: { global: "damageBegin1" },
+ 				forced: true,
+ 				filter(event, player) {
+-					return event.source && event.source.sameSexAs(event.player);
++					return event.source;
+ 				},
+ 				content() {
+-					player.draw();
++					player.draw(1);
+ 				},
+ 			},
+ 			mio_tishen: {
+@@ -8942,8 +9072,8 @@
+ 				async cost(event, trigger, player) {
+ 					event.type = get.type(trigger.card) == "basic";
+ 					var prompt = event.type
+-						? "令一名角色摸两张牌或弃置两张牌"
+-						: "令一名角色回复1点体力或对其造成1点伤害";
++						? "令一名角色摸四张牌或弃置四张牌"
++						: "令一名角色回复2点体力或对其造成2点伤害";
+ 					event.result = await player
+ 						.chooseTarget(get.prompt("kanade_benzhan"), prompt)
+ 						.set("ai", function (target) {
+@@ -8970,10 +9100,10 @@
+ 					var list;
+ 					if (event.type) {
+ 						if (!target.countCards("he")) event._result = { index: 0 };
+-						else list = ["令" + trans + "摸两张牌", "令" + trans + "弃置两张牌"];
++						else list = ["令" + trans + "摸四张牌", "令" + trans + "弃置四张牌"];
+ 					} else {
+ 						if (target.isHealthy()) event._result = { index: 1 };
+-						else list = ["令" + trans + "回复1点体力", "对" + trans + "造成1点伤害"];
++						else list = ["令" + trans + "回复2点体力", "对" + trans + "造成2点伤害"];
+ 					}
+ 					player
+ 						.chooseControl()
+@@ -8994,11 +9124,11 @@
+ 					"step 1";
+ 					player.addExpose(0.2);
+ 					if (event.type) {
+-						if (result.index == 0) target.draw(2);
+-						else target.chooseToDiscard(2, "he", true);
++						if (result.index == 0) target.draw(4);
++						else target.chooseToDiscard(4, "he", true);
+ 					} else {
+-						if (result.index == 0) target.recover();
+-						else target.damage();
++						if (result.index == 0) target.recover(2);
++						else target.damage(2);
+ 					}
+ 				},
+ 			},
+@@ -9604,20 +9734,13 @@
+ 				async content(event, trigger, player) {
+ 					const target = event.indexedData;
+ 					const { result } = await target.judge();
+-					switch (result.color) {
+-						case "red":
+-							await target.draw();
+-							break;
+-
+-						case "black":
+-							const source = _status.currentPhase;
+-							if (source && source.isIn() && source.countCards("h") > 0) {
+-								source.chooseToDiscard("he", true);
+-							}
+-							break;
+-
+-						default:
+-							break;
++					if (result.color === "red" && target.isIn()) {
++						await target.draw();
++					} else {
++						const source = _status.currentPhase;
++						if (source && source.isIn() && source.countCards("h") > 0) {
++							source.chooseToDiscard("he", true);
++						}
+ 					}
+ 				},
+ 				ai: { expose: 0.2 },
+@@ -9889,7 +10012,7 @@
+ 					"step 1";
+ 					if (result.bool && game.hasPlayer((current) => current != player)) {
+ 						player
+-							.chooseTarget(lib.filter.notMe, true, "选择一名其他角色，对其造成1点雷属性伤害")
++							.chooseTarget(lib.filter.notMe, true, "选择一名其他角色，对其造成4点雷属性伤害")
+ 							.set("ai", function (target) {
+ 								var player = _status.event.player;
+ 								return get.damageEffect(target, player, player, "thunder");
+@@ -9899,7 +10022,7 @@
+ 					var target = result.targets[0];
+ 					player.addExpose(0.2);
+ 					player.line(target, "thunder");
+-					target.damage("thunder");
++					target.damage(4, "thunder");
+ 				},
+ 			},
+ 			hisako_zhuanyun: {
+@@ -9995,7 +10118,7 @@
+ 				trigger: { player: "phaseJieshuBegin" },
+ 				forced: true,
+ 				content() {
+-					player.draw(player.countCards("h") == 0 ? 2 : 1);
++					player.draw(player.countCards("h") == 0 ? 4 : 2);
+ 				},
+ 			},
+ 			riki_mengzhong: {
+@@ -10191,6 +10314,7 @@
+ 				},
+ 				content() {
+ 					player.draw(player.maxHp);
++					player.draw(player.maxHp);
+ 				},
+ 			},
+ 			akane_quanqing: {
+@@ -10214,14 +10338,14 @@
+ 					"step 0";
+ 					var num = cards[0].number;
+ 					var trans = get.translation(target);
+-					var list = ["令" + trans + "摸一张牌"];
++					var list = ["令" + trans + "摸两张牌"];
+ 					event.addIndex = 0;
+ 					if (num > 6) {
+ 						if (target.countDiscardableCards(player, "hej") > 0)
+ 							list.push("弃置" + trans + "区域内的一张牌");
+ 						else event.addIndex++;
+ 					}
+-					if (num > 10) list.push("对" + trans + "造成1点伤害");
++					if (num > 10) list.push("对" + trans + "造成3点伤害");
+ 					if (list.length == 1) event._result = { index: 0 };
+ 					else
+ 						player
+@@ -10235,13 +10359,13 @@
+ 					if (result.index > 0) result.index += event.addIndex;
+ 					switch (result.index) {
+ 						case 0:
+-							target.draw();
++							target.draw(2);
+ 							break;
+ 						case 1:
+ 							player.discardPlayerCard(target, "hej", true);
+ 							break;
+ 						case 2:
+-							target.damage("nocard");
++							target.damage("nocard", 2);
+ 							break;
+ 					}
+ 				},
+@@ -10923,6 +11047,8 @@
+ 					const target = event.targets[0];
+ 					player.awakenSkill("saya_powei");
+ 					game.asyncDelay(3);
++					player.gainMaxHp();
++					player.draw(9);
+ 					var next = game.createEvent("saya_powei_loop", false, trigger);
+ 					next.playertrue = player;
+ 					next.playerfalse = target;
+@@ -11261,80 +11387,67 @@
+ 					},
+ 				},
+ 			},
+-			yui_lieyin: {
+-				trigger: { player: "phaseUseBegin" },
+-				locked: true,
+-				async cost(event, trigger, player) {
+-					const list = [];
+-					if (player.storage._ichiban_no_takaramono) list.push("cancel2");
+-					const { control, index } = await player
+-						.chooseControl(...list)
+-						.set("choiceList", [
+-							"令此阶段内的所有红色牌视为【杀】",
+-							"令此阶段内的所有【杀】视为【决斗】",
+-						])
+-						.set(
+-							"prompt",
+-							player.storage._ichiban_no_takaramono
+-								? get.prompt("yui_lieyin")
+-								: "烈音：请选择一项"
+-						)
+-						.set("ai", function () {
+-							var player = _status.event.player;
+-							var shas = player.countCards("h", "sha");
+-							if (shas > 0) {
+-								if (
+-									game.hasPlayer(function (current) {
+-										return (
+-											get.attitude(player, current) < 0 &&
+-											player.canUse("juedou", current) &&
+-											!current.hasSha() &&
+-											get.effect(current, { name: "juedou" }, player, player) > 0
+-										);
+-									})
+-								)
+-									return 1;
+-								if (player.storage._ichiban_no_takaramono) return "cancel2";
+-							}
+-							if (
+-								player.countCards("h", function (card) {
+-									return (
+-										get.color(card) == "red" &&
+-										card.name != "sha" &&
+-										player.hasValueTarget(card)
+-									);
+-								}) == 0
+-							)
+-								return 0;
+-							if (player.storage._ichiban_no_takaramono) return "cancel2";
+-							return 1;
+-						})
+-						.forResult();
+-					if (control !== "cancel2") {
+-						event.result = {
+-							bool: true,
+-							cost_data: { index },
+-						};
+-					}
+-				},
+-				async content(event, trigger, player) {
+-					player.addTempSkill(`yui_lieyin${event.cost_data.index}`, "phaseUseEnd");
+-				},
+-			},
+-			yui_lieyin0: {
+-				mod: {
+-					cardname(card) {
+-						if (get.color(card) == "red") return "sha";
+-					},
+-				},
+-			},
+-			yui_lieyin1: {
+-				mod: {
+-					cardname(card) {
+-						if (card.name == "sha") return "juedou";
+-					},
+-				},
+-			},
++	                yui_lieyin:{
++                            trigger:{player:'phaseUseBegin'},
++	                    forced:true,          // 改为锁定技
++	                    locked:true,
++	                    zhuanhuanji:true,    // 添加转换技标记
++	                    marktext:'☯',        // 添加阴阳标记
++	                    mark:true,           // 显示标记
++	                    intro:{
++	                        content:function(storage){
++	                            return '转换技。出牌阶段开始时，'+(storage?'阳：本阶段内的【杀】均视为【决斗】。':'阴：本阶段内的红色牌均视为【杀】。');
++	                        },
++	                    },
++	                    content:function(){
++	                        'step 0'
++	                        player.logSkill('yui_lieyin');
++	                        // 根据当前状态添加对应的临时技能
++	                        player.addTempSkill('yui_lieyin'+(player.storage.yui_lieyin?1:0),'phaseUseEnd');
++		                // 切换状态
++	                        player.changeZhuanhuanji('yui_lieyin');
++	                    },
++	                },
++	                // 烈音（阴）：红色牌视为杀，无距离限制，伤害+1
++	                yui_lieyin0:{
++	                    mod:{
++	                    // 将红色牌视为杀
++	                        cardname:function(card){
++	                            if(get.color(card)=='red') return 'sha';
++	                        },
++	                    // 使用杀时无距离限制
++	                        targetInRange:function(card){
++        	                    if(card.name=='sha') return true;
++	                        },
++	                    },
++	                    // 使用杀时触发伤害+1效果
++	                    trigger:{player:'useCard1'},
++	                    forced:true,
++	                    filter:function(event,player){
++	                        return event.card.name=='sha';
++	                    },
++	                    content:function(){
++	                        trigger.baseDamage++; // 伤害+1
++	                    },
++	                },
++	                // 烈音（阳）：杀视为决斗
++	                yui_lieyin1:{
++	                    mod:{
++	                        // 将杀视为决斗
++	                        cardname:function(card){
++	                            if(card.name=='sha') return 'juedou';
++	                        },
++	                    },
++	                    trigger:{player:'useCard1'},
++	                    forced:true,
++	                    filter:function(event,player){
++	                        return event.card.name=='juedou';
++	                    },
++	                    content:function(){
++	                        player.draw();
++	                    },
++	                },
++
+ 			yui_takaramono: {
+ 				trigger: { player: "phaseZhunbeiBegin" },
+ 				forced: true,
+@@ -11369,7 +11482,7 @@
+ 				line: { color: [253, 153, 182] },
+ 				async cost(event, trigger, player) {
+ 					event.result = await player
+-						.chooseTarget([1, 2], get.prompt("yui_yinhang"), "令至多两名角色各摸一张牌")
++						.chooseTarget([1, 2], get.prompt("yui_yinhang"), "令至多两名角色各摸两张牌")
+ 						.set("ai", function (target) {
+ 							return get.attitude(_status.event.player, target);
+ 						})
+@@ -11378,7 +11491,7 @@
+ 				async content(event, trigger, player) {
+ 					const targets = event.targets;
+ 					targets.sortBySeat();
+-					game.asyncDraw(targets);
++					game.asyncDraw(targets, 2);
+ 				},
+ 			},
+ 			//吉野晴彦
+@@ -11551,7 +11664,7 @@
+ 				getIndex: (event) => Math.abs(event.num),
+ 				async cost(event, trigger, player) {
+ 					event.result = await player
+-						.chooseTarget([1, 2], get.prompt("iwasawa_yinhang"), "令至多两名角色各摸一张牌")
++						.chooseTarget([1, 2], get.prompt("iwasawa_yinhang"), "令至多两名角色各摸两张牌")
+ 						.set("ai", function (target) {
+ 							return get.attitude(_status.event.player, target);
+ 						})
+@@ -11560,7 +11673,7 @@
+ 				async content(event, trigger, player) {
+ 					const targets = event.targets;
+ 					targets.sortBySeat();
+-					game.asyncDraw(targets);
++					game.asyncDraw(targets, 2);
+ 				},
+ 			},
+ 			iwasawa_mysong: {
+@@ -12659,7 +12772,7 @@
+ 			yui_lieyin(player) {
+ 				if (player.storage._ichiban_no_takaramono)
+ 					return "锁定技，出牌阶段开始时，你可选择一项：①本阶段内的红色牌均视为【杀】；②本阶段内的【杀】均视为【决斗】。";
+-				return "锁定技，出牌阶段开始时，你选择一项：①本阶段内的红色牌均视为【杀】；②本阶段内的【杀】均视为【决斗】。";
++				return "锁定技，转换技。出牌阶段开始时，阴: 本阶段内的红色牌均 视为【杀】，且你使用杀时无距离限制且伤害+1；阳: 本阶段内的【杀】均视为【决斗】。当你使用决斗时，你摸一张牌。";
+ 			},
+ 			yuzuru_kunfen(player) {
+ 				if (player.storage._yuzuru_sss)
+@@ -12704,7 +12817,7 @@
+ 			hina_shenshi: "神视",
+ 			hina_shenshi_yingbian: "神视",
+ 			hina_shenshi_info:
+-				"神势力技。出牌阶段开始时/结束时，你可摸两张牌，然后将其中一张牌置于牌堆顶。你以此法得到的牌视为拥有全部应变效果，且可以无条件发动。",
++				"键势力技。出牌阶段开始时/结束时，你可摸四张牌，然后将其中一张牌置于牌堆顶。你以此法得到的牌视为拥有全部应变效果，且可以无条件发动。",
+ 			hina_xingzhi: "幸凪",
+ 			hina_xingzhi_info:
+ 				"键势力技。每回合限一次，你可以通过“助战”触发一张牌的全部应变效果，且响应助战的角色摸两张牌。",
+@@ -12872,7 +12985,7 @@
+ 				"每当你使用（指定目标后）或被使用（成为目标后）一张【决斗】或红色的【杀】时，你可以摸一张牌。",
+ 			yui_lieyin: "烈音",
+ 			yui_lieyin_info:
+-				"锁定技，出牌阶段开始时，你选择一项：①本阶段内的红色牌均视为【杀】；②本阶段内的【杀】均视为【决斗】。",
++				"锁定技，转换技。出牌阶段开始时，阴: 本阶段内的红色牌均 视为【杀】，且你使用杀时无距离限制且伤害+1；阳: 本阶段内的【杀】均视为【决斗】。当你使用决斗时，你摸一张牌。",
+ 			yui_takaramono: "珍宝",
+ 			yui_takaramono_info:
+ 				"觉醒技，准备阶段，若你满足以下条件中的至少两个：①体力值不大于1；②场上有已死亡的角色；③已因〖激昂〗累计获得过至少三张牌；则你获得技能〖引吭〗，将〖烈音〗描述中的「你选择」改为「你可选择」，然后加1点体力上限并回复1点体力。",
+@@ -12943,10 +13056,10 @@
+ 			sasami_baoqiu_info:
+ 				"锁定技，你的攻击范围+2。当你使用【杀】指定目标后，你进行判定。若结果：为红色，此【杀】对其的伤害值基数+1；为黑色，其无法闪避此【杀】；为♠/♥，此【杀】不计入使用次数限制且你摸一张牌；为♦/♣，目标角色的所有非锁定技失效直到回合结束，且你弃置其一张牌。",
+ 			akane_jugu: "巨贾",
+-			akane_jugu_info: "锁定技，1.你的手牌上限+X。2.游戏开始时，你摸X张牌（X为你的体力上限）。",
++			akane_jugu_info: "锁定技，1.你的手牌上限+X。2.游戏开始时，你摸2X张牌（X为你的体力上限）。",
+ 			akane_quanqing: "权倾",
+ 			akane_quanqing_info:
+-				"出牌阶段，你可选择：1.弃置一张点数大于10的牌并对攻击范围内的一名其他角色造成1点伤害；2.弃置一张点数大于6的牌并弃置攻击范围内的一名其他角色区域内的一张牌。3.弃置一张牌并令攻击范围内的一名其他角色摸一张牌。",
++				"出牌阶段，你可选择：1.弃置一张点数大于10的牌并对攻击范围内的一名其他角色造成2点伤害；2.弃置一张点数大于6的牌并弃置攻击范围内的一名其他角色区域内的一张牌。3.弃置一张牌并令攻击范围内的一名其他角色摸两张牌。",
+ 			akane_yifu: "蚁附",
+ 			akane_yifu2: "蚁附",
+ 			akane_yifu_info:
+@@ -12963,7 +13076,7 @@
+ 				"出牌阶段开始时，你可以令一名其他角色交给你一张牌。你于本回合内使用与该牌名称相同的牌时不能被其他角色响应。",
+ 			riki_nvzhuang: "女装",
+ 			riki_nvzhuang_info:
+-				"锁定技，此武将牌视为包含女性性别。结束阶段，若你：有手牌，你摸一张牌；没有手牌，你摸两张牌。",
++				"锁定技，此武将牌视为包含女性性别。结束阶段，若你：有手牌，你摸两张牌；没有手牌，你摸四张牌。",
+ 			riki_mengzhong: "梦终",
+ 			riki_mengzhong_info:
+ 				"觉醒技，准备阶段，若你已因〖问计〗获得了三张或更多的牌，则你加1点体力上限并回复1点体力，失去〖问计〗并获得〖重振〗。",
+@@ -12972,7 +13085,7 @@
+ 				"出牌阶段开始时，你可以与一名角色拼点。若你赢，你获得该角色手牌区，装备区，判定区的各一张牌；若你没赢，你于此阶段内使用牌时不能指定其他角色为目标。",
+ 			hisako_yinbao: "音爆",
+ 			hisako_yinbao_info:
+-				"当你受到伤害/回复体力后，你可以判定。若结果为♠，则你对一名其他角色造成1点雷属性伤害。",
++				"当你受到伤害/回复体力后，你可以判定。若结果为♠，则你对一名其他角色造成4点雷属性伤害。",
+ 			hisako_zhuanyun: "转运",
+ 			hisako_zhuanyun_info: "锁定技，你的判定会朝向对你有利的方向倾斜。",
+ 			hinata_qiulve: "球略",
+@@ -13040,9 +13153,9 @@
+ 			kanade_mapo_info: "你可以将一张♥牌当做【麻婆豆腐】使用。你使用的【麻婆豆腐】可以多指定一个目标。",
+ 			kanade_benzhan: "奔战",
+ 			kanade_benzhan_info:
+-				"每回合限一次。当你使用或打出牌响应其他角色，或其他角色使用或打出牌响应你后，若此牌为：基本牌，你可令一名角色弃置两张牌或令一名角色摸两张牌；非基本牌，你可对一名角色造成1点伤害或令一名其他角色回复1点体力。",
++				"每回合限一次。当你使用或打出牌响应其他角色，或其他角色使用或打出牌响应你后，若此牌为：基本牌，你可令一名角色弃置四张牌或令一名角色摸四张牌；非基本牌，你可对一名角色造成2点伤害或令一名其他角色回复2点体力。",
+ 			mio_tuifu: "推腐",
+-			mio_tuifu_info: "锁定技，当一名角色对一名同性角色造成伤害时，你摸一张牌。",
++			mio_tuifu_info: "锁定技，当一名角色受到伤害时，你摸一张牌。",
+ 			mio_tishen: "替身",
+ 			mio_tishen_info:
+ 				"限定技，准备阶段，你可以将体力值回复至体力上限并摸等同于回复量的牌，然后将武将牌替换为【西园美鸟】。",
+@@ -13072,7 +13185,7 @@
+ 			shiorimiyuki_banyin_info: "当你受到伤害或回复体力后，你可令一名其他角色回复1点体力。",
+ 			shiorimiyuki_tingxian: "铤险",
+ 			shiorimiyuki_tingxian_info:
+-				"出牌阶段开始时，你可以摸至多三张牌。若如此做，你回复1点体力，且此阶段结束时你失去X点体力。（X为你得到的牌中仍在手牌区的牌的数量）",
++				"出牌阶段开始时，你可以摸至多四张牌。若如此做，你回复4点体力，且此阶段结束时你失去X点体力。（X为你得到的牌中仍在手牌区的牌的数量）",
+ 			shiorimiyuki_tingxian2: "铤险",
+ 			miki_shenqiang: "神枪",
+ 			miki_shenqiang_info:
+@@ -13180,7 +13293,7 @@
+ 				"当你受到伤害/对其他角色造成伤害时，你可进行判定。若结果为红色/黑色，此伤害-1/+1。",
+ 			shiroha_jiezhao: "解兆",
+ 			shiroha_jiezhao_info:
+-				"一名角色的判定牌生效前，你可打出一张「兆」代替之。当你以此法移去最后一张「兆」后，你加1点体力上限并回复1点体力，然后修改〖孤影〗并随机获得以下技能中的一个：〖炒饭〗/〖习事〗/〖呣啾〗/〖结伴〗。",
++				"一名角色的判定牌生效前，你可打出一张「兆」代替之。当你以此法移去最后一张「兆」后，你加1点体力上限并回复1点体力，然后修改〖孤影〗并获得以下技能：〖炒饭〗/〖习事〗/〖呣啾〗/〖结伴〗/〖时迴〗。",
+ 			//猴年马月爆料再利用
+ 			shizuku_sizhi: "思智",
+ 			shizuku_sizhi2: "思智",
+@@ -13233,7 +13346,7 @@
+ 				"你可以如手牌般使用或打出“影”。锁定技，当你使用“影”时，强制触发对应的应变效果。",
+ 			kotomi_qinji: "琴击",
+ 			kotomi_qinji_info:
+-				"出牌阶段开始时，你可视为使用【万箭齐发】。你以此法使用【万箭齐发】造成的伤害视为失去体力。",
++				"出牌阶段开始时，你可视为使用使用【万箭齐发】。你以此法使用【万箭齐发】造成的伤害视为失去体力。",
+ 			kotomi_chuanxiang: "传箱",
+ 			kotomi_chuanxiang2: "传箱",
+ 			kotomi_chuanxiang_info:
+@@ -13248,7 +13361,7 @@
+ 			mia_fengfa_info: "锁定技。摸牌阶段，你多摸X张牌（X为你上回合使用过的牌数）。",
+ 			kano_liezhen: "列阵",
+ 			kano_liezhen_info:
+-				"结束阶段，若你本回合内使用过牌且这些牌的类型：不均相同，你可视为使用【排兵布阵】或智囊；均相同，你获得仁库中的所有牌（没有则改为摸两张牌）。",
++				"结束阶段，若你本回合内使用过牌且这些牌的类型：不均相同，你可视为使用【排兵布阵】或智囊；均相同，你获得仁库中的所有牌（没有则改为四两张牌）。",
+ 			kano_paibingbuzhen: "排兵布阵",
+ 			kano_paibingbuzhen_info:
+ 				"出牌阶段，对至多三名角色使用。目标角色摸一张牌，然后将一张牌置入仁库。若仁库中的牌类型或颜色均相同，则你摸一张牌。",
+@@ -13263,18 +13376,18 @@
+ 				"键势力技。结束阶段，你可以令至多X+1名角色各摸一张牌，且这些角色于自己的下个回合内第一次造成的伤害+1（X为你本回合内使用【杀】和伤害性锦囊牌的次数）。",
+ 			liyingxia_wumai: "武脉",
+ 			liyingxia_wumai_info:
+-				"蜀势力技。一轮游戏开始时，你可以选择获得其中一个未选择过的技能直到本轮结束：〖八阵〗/〖集智〗/〖观星〗/〖游龙〗。若均已选择过，则你可以摸X张牌（X为场上已受伤的角色数且至多为3）。",
++				"键势力技。一轮游戏开始时，你可以选择获得其中一个未选择过的技能：〖念力〗/〖音爆〗/〖传箱〗/〖舍宴〗/〖演艺〗/〖独隐〗。若均已选择过，则你可以摸X+2张牌（X为场上已受伤的角色数且至多为3。",
+ 			erika_shisong: "识诵",
+ 			erika_shisong_info:
+ 				"锁定技。①你的手牌上限+X（X为你的护甲数）。②当你于回合内使用第Y张牌时，若此牌与你上回合使用的第Y张牌类型相同，则你摸一张牌。",
+ 			erika_yousheng: "佑生",
+ 			erika_yousheng_info:
+-				"使命技。①限定技。一轮游戏开始时，你可以选择至多两名其他角色。你减2点体力上限并增加3点护甲。②当你〖佑生①〗选择的角色成为【杀】或伤害类锦囊牌的目标时，你可以弃置X张牌并将此目标转移给自己（X为你本轮内发动过〖佑生②〗的次数）。此牌结算结束后，你可令一名原目标角色获得此牌。③成功：当你失去最后的护甲后，若你已发动过〖佑生①〗，则你和所有〖佑生①〗选择的角色各摸三张牌。④失败：当一名〖佑生①〗选择的角色因【杀】或伤害类锦囊牌而受到伤害时，你失去所有护甲并弃置等量的牌。",
++				"使命技。①限定技。一轮游戏开始时，你可以选择至多两名其他角色。你增加4点体力上限，回复4点体力，摸4张牌并增加16点护甲。②当你〖佑生①〗选择的角色成为【杀】或伤害类锦囊牌的目标时，你可以弃置X张牌并将此目标转移给自己（X为你本轮内发动过〖佑生②〗的次数）。此牌结算结束后，你可令一名原目标角色获得此牌。③成功：当你失去最后的护甲后，若你已发动过〖佑生①〗，则你和所有〖佑生①〗选择的角色各摸四张牌。④失败：当一名〖佑生①〗选择的角色因【杀】或伤害类锦囊牌而受到伤害而进入濒死状态时，你失去所有护甲并弃置等量的牌。",
+ 			erika_yousheng_append:
+ 				'<span style="font-family: yuanli">Death is not the end of life, but the completion of life.</span>',
+ 			satomi_luodao: "落刀",
+ 			satomi_luodao_info:
+-				"当你使用【杀】指定目标后，你可以展示目标角色的所有手牌。若其中：有【闪】，则你弃置其中的一张【闪】；没有【闪】，则你弃置一张牌。",
++				"当你使用【杀】指定目标后，你可以展示目标角色的所有手牌。若其中：有【闪】，则你弃置其中的一张【闪】；没有【闪】，则你摸两张牌。",
+ 			satomi_daohai: "稻海",
+ 			satomi_daohai_info:
+ 				"结束阶段，若你本回合内弃置过牌，则你可以视为使用一张【五谷丰登】。然后你可以将你于此【五谷丰登】中得到的牌当做【乐不思蜀】使用。",
+@@ -13286,16 +13399,16 @@
+ 			tenzen_retianquan_info:
+ 				"每回合限一次。当你使用【杀】指定目标后，你可失去1点体力或弃置一张牌，然后亮出牌堆顶的三张牌（若你的体力值小于体力上限的50%，则改为展示五张牌）。这些牌中每有一张基本牌，响应此牌所需的【闪】的数量便+1。此牌结算结束后，若此牌造成过伤害，则你获得展示牌中的所有非基本牌。",
+ 			iriya_yinji: "殷极",
+-			iriya_yinji_info: "锁定技。出牌阶段开始时，你将手牌摸至17张。你不能直接使用以此法得到的牌。",
++			iriya_yinji_info: "锁定技。出牌阶段开始时，你摸17张牌。你不能直接使用以此法得到的牌。",
+ 			iriya_haozhi: "豪掷",
+ 			iriya_haozhi_info:
+ 				"出牌阶段，你可以按照斗地主牌型弃置至少两张牌，且其他角色可以依次对其进行一轮响应。最后一名进行响应的角色可以根据对应牌型执行对应效果。" +
+-				"对子：其可以令至多两名角色各摸一张牌。" +
+-				"三带：其可以弃置至多三名其他角色的各一张牌，然后摸一张牌。" +
++				"对子：其可以令至多两名角色各摸两张牌。" +
++				"三带：其可以弃置至多三名其他角色的各一张牌，然后摸两张牌。" +
+ 				"单顺：其可以弃置一名其他角色的一张牌。若其未以此法弃置过颜色相同的牌，则其可以重复此流程。然后其摸等量的牌。" +
+ 				"双顺：其可以获得一名其他角色的一张牌。若其未以此法获得过颜色相同的牌，则其可以重复此流程。然后其回复等量的体力。" +
+-				"三顺/飞机：其可以令至多3名其他角色翻面，然后对其中一名角色造成1点火属性伤害。" +
+-				"炸弹/四带二：其可以对一名角色造成2点雷属性伤害，然后目标角色翻面，弃置装备区的所有牌和四张手牌。",
++				"三顺/飞机：其可以令至多3名其他角色翻面，然后对其中一名角色造成2点火属性伤害。" +
++				"炸弹/四带二：其可以对一名角色造成4点雷属性伤害，然后目标角色翻面，弃置装备区的所有牌和四张手牌。",
+ 			visible_fuuko_xingdiao: '<span data-nature="soilmm">星</span>',
+ 			fuuko_xingdiao: "星雕",
+ 			fuuko_xingdiao_info:
+@@ -13317,17 +13430,17 @@
+ 			key_misuzu: "神尾观铃",
+ 			misuzu_hengzhou: "恒咒",
+ 			misuzu_hengzhou_info:
+-				"锁定技，准备阶段开始时，或当你受到1点伤害或回复1点体力后，你获得一个“诅咒”标记。你的手牌上限和摸牌阶段的额定摸牌数+X。结束阶段开始时，若X大于3，则你移去所有“诅咒”标记并失去1点体力。（X为“诅咒”标记数）",
++				"锁定技，准备阶段开始时，或当你受到1点伤害或回复1点体力后，你获得一个“诅咒”标记。你的手牌上限和摸牌阶段的额定摸牌数+X。结束阶段开始时，若X大于5，则你移去所有“诅咒”标记并失去1点体力。（X为“诅咒”标记数）",
+ 			misuzu_nongyin: "浓饮",
+ 			misuzu_nongyin_info:
+ 				"当你需要使用【桃】时，你可将一张红色非锦囊牌当做【乐不思蜀】置入自己的判定区，然后视为使用一张【桃】。",
+ 			misuzu_zhongxing: "终幸",
+ 			misuzu_zhongxing_info:
+-				"每回合限一次，当你判定区的牌移动到其他区域后，你可令一名角色回复1点体力或摸两张牌。",
++				"每回合限一次，当你判定区的牌移动到其他区域后，你可令一名角色回复2点体力或摸四张牌。",
+ 			key_kamome: "久岛鸥",
+ 			kamome_yangfan: "扬帆",
+ 			kamome_yangfan_info:
+-				"锁定技，游戏开始时，你将一张【旅行箱】置入你的装备区。当你失去装备区内的一张牌后，你摸两张牌。",
++				"锁定技，游戏开始时，你将一张【旅行箱】置入你的装备区。当你失去装备区内的一张牌后，你摸四张牌。",
+ 			kamome_huanmeng: "幻梦",
+ 			kamome_huanmeng_info:
+ 				"准备阶段开始时，你可以观看牌堆顶的X+1张牌并可以按任意顺序置于牌堆顶或牌堆底。（X为你装备区内的牌数）",
+@@ -13352,6 +13465,9 @@
+ 			yuuki_yicha: "异插",
+ 			yuuki_yicha_info:
+ 				"出牌阶段开始时，你可依次进行两次判定并将判定牌依次置入两行三列方阵的两个随机位置中。然后你依次进行四次判定，每次可将当前判定牌置入空方格，且须与相邻方格的牌颜色均不同。若如此做，你令一名角色获得方阵内的所有牌。",
++		    yuuki_wuxin: "无心",
++		    yuuki_wuxin_info:
++		        "锁定技，转换技。准备阶段，阴：你对别人造成伤害时，取消之。阳; 别人对你造成伤害时，取消之。每名角色的结束阶段开始时，你摸x张牌(x为当前角色造成的伤害数)",
+ 			key_kyouko: "伊座并杏子",
+ 			kyouko_rongzhu: "容助",
+ 			kyouko_rongzhu_info:
+@@ -13389,7 +13505,7 @@
+ 				"你可以将一张锦囊牌当做【杀】使用（无距离限制）。当你使用【杀】指定第一个目标后，你选择一个与上次不同的选项：①此【杀】不可被响应。②此【杀】无视防具。③此【杀】伤害+1。④此【杀】不计入次数限制。",
+ 			kyou_duanfa: "断发",
+ 			kyou_duanfa_info:
+-				"限定技，当你受到伤害时，若伤害值不小于你的体力值，则你可弃置所有手牌，防止此伤害并回复1点体力；且当你于你的下回合开始前成为【杀】或伤害性锦囊牌的目标后，你摸一张牌。",
++				"限定技，当你受到伤害时，若伤害值不小于你的体力值，则你可以摸4张手牌，防止此伤害并回复4点体力；且当你于你的下回合开始前成为【杀】或伤害性锦囊牌的目标后，你弃置一张牌。",
+ 			key_seira: "樱庭星罗",
+ 			seira_xinghui: "星辉",
+ 			seira_xinghui_info:
+@@ -13423,14 +13539,17 @@
+ 			key_minagi: "远野美凪",
+ 			minagi_peiquan: "配券",
+ 			minagi_peiquan_info:
+-				"锁定技。①游戏开始时，你将你所有的手牌记录为“米券”。②出牌阶段，你可以赠予一张“米券”，然后执行一项本回合内未被选择过的效果：⒈对其造成1点伤害；⒉摸两张牌；⒊弃置其的两张牌；⒋亮出牌堆顶的一张牌，然后你可以使用之。",
++				"锁定技。①游戏开始时，你将你所有的手牌记录为“米券”。②出牌阶段，你可以赠予一张“米券”，然后执行一项本回合内未被选择过的效果：⒈对其造成2点伤害；⒉摸四张牌；⒊弃置其的两张牌；⒋亮出牌堆顶的一张牌，然后你可以使用之。",
+ 			minagi_huanliu: "幻流",
+ 			minagi_huanliu_info:
+ 				"准备阶段开始时，你可与一名其他角色进行协力，并获得“远野小满”的所有技能直到目标角色的结束阶段开始。若“协力”成功，则你可以将所有手牌记录为“米券”。",
+ 			key_michiru: "远野小满",
+ 			michiru_sheyuan: "舍愿",
+ 			michiru_sheyuan_info:
+-				"每轮限一次。若你没有“米券”，则你可以将所有手牌当做任意基本牌或普通锦囊牌使用，然后摸等量的牌。",
++				"每名角色的回合限一次。若你没有“米券”，则你可以将所有手牌当做任意基本牌或普通锦囊牌使用，然后摸等量的牌。",
++			michiru_huzhu: "互助",
++		    michiru_huzhu_info:
++		        "锁定技，游戏开始时，你获得一张“米券”。当你的手牌花色数变化时，你获得一张“米券”，然后回复一点体力。若你拥有“米券”，你每使用一张基本牌时，你移除一张“米券”。结算完成后，你额外摸X张牌(X为你拥有的“米券”数量)。",
+ 			minagi_tag: "米券",
+ 
+ 			key_one: "ONE ～辉之季节～",
