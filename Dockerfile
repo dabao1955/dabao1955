@@ -16,7 +16,7 @@ RUN \
     busybox wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
     busybox tar -xvf out.tar.gz && \
     busybox mv ./CrashCore /usr/local/bin/clash && \
-    ln -sfv /usr/bin/xfwm4 /usr/bin/openbox
+    ln -sfv /usr/bin/xfwm4 /usr/bin/openbox && \
     rm -rf /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/* \
