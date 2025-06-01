@@ -22,8 +22,8 @@ game.import("character", function () {
 			key_rei: ["male", "key", 5, ["xiandeng", "shulv", "xisheng"]],
 			key_komari: ["female", "key", 5, ["komari_tiankou", "komari_xueshang"]],
 			key_yukine: ["female", "key", 5, ["yukine_wenzhou"]],
-			key_yusa: ["female", "key", 5, ["yusa_yanyi", "yusa_misa", "dualside"], ["dualside:key_misa"]],
-			key_misa: ["female", "key", 5, ["misa_yehuo", "misa_yusa", "dualside"], ["unseen"]],
+			key_yusa: ["female", "key", 5, ["yusa_yanyi","yusa_zhumeng", "yusa_misa", "dualside"], ["dualside:key_misa"]],
+			key_misa: ["female", "key", 8, ["misa_hunying", "misa_yehuo", "misa_yusa", "dualside"], ["unseen"]],
 			key_masato: ["male", "key", "4/8", ["masato_baoquan"]],
 			key_iwasawa: ["female", "key", 5, ["iwasawa_yinhang", "iwasawa_mysong"]],
 			key_kengo: ["male", "key", 5, ["kengo_weishang", "kengo_guidui"]],
@@ -81,7 +81,7 @@ game.import("character", function () {
 			key_crow: ["male", "key", 5, [], ["unseen"]],
 			key_asara: ["female", "key", 5, ["asara_shelu", "asara_yingwei"]],
 			key_kotomi: ["female", "key", 5, ["kotomi_qinji", "kotomi_chuanxiang"]],
-			key_mia: ["female", "key", 5, ["mia_shihui", "mia_qianmeng"]],
+			key_mia: ["female", "key", 5, ["mia_shihui", "mia_rujing", "mia_qianmeng"]],
 			key_kano: ["female", "key", 5, ["kano_liezhen", "kano_poyu"]],
 			db_key_liyingxia: [
 				"female",
@@ -2894,7 +2894,7 @@ game.import("character", function () {
 							.set("filterButton", function (button) {
 								return get.name(button.link) == "shan";
 							});
-					} else if (player.countCards("he") > 0) player.draw(2);
+					} else if (player.countCards("he") > 0) player.draw(4);
 				},
 			},
 			satomi_daohai: {
@@ -2979,6 +2979,11 @@ game.import("character", function () {
 				},
 			},
 			erika_yousheng: {
+				trigger: {
+					global: "phaseBefore",
+					player: "enterGame",
+				},
+			    forced: true,
 				init: (player) => {
 					player.addSkill("erika_yousheng_mamori");
 				},
@@ -3008,7 +3013,9 @@ game.import("character", function () {
 						.forResult();
 				},
 				async content(event, trigger, player) {
-					player.discard(event.cards);
+					//player.discard(event.cards);
+					player.draw(event.cards);
+					player.draw(event.cards);
 					var ruka = trigger.target,
 						evt = trigger.getParent();
 					evt.targets.remove(ruka);
@@ -3423,7 +3430,112 @@ game.import("character", function () {
 					},
 				},
 			},
-			mia_qianmeng: {
+            mia_rujing: {
+                forced: true,
+                init: function(player) {
+                    player.storage.mia_rujing = {
+                        suits: [...new Set(player.getCards('h').map(card => get.suit(card)))],
+                        state: 'yin'
+                    };
+                },
+                trigger: {
+                    player: ['gainAfter', 'loseAfter']
+                },
+                group: ['mia_rujing_yin', 'mia_rujing_yang'],
+                filter: function(event, player) {
+                    if(!player.storage.mia_rujing) return false;
+                    var currentSuits = [...new Set(player.getCards('h').map(card => get.suit(card)))];
+                    return currentSuits.length !== player.storage.mia_rujing.suits.length;
+                },
+                content: function() {
+                    var currentSuits = [...new Set(player.getCards('h').map(card => get.suit(card)))];
+                    player.storage.mia_rujing.suits = currentSuits;
+                    player.storage.mia_rujing.state = (player.storage.mia_rujing.state === 'yin' ? 'yang' : 'yin');
+                    game.log(player, '的【入境】状态变为', player.storage.mia_rujing.state === 'yin' ? '阴' : '阳');
+                    player.markSkill('mia_rujing');
+                },
+                subSkill: {
+                    yin: {
+                        forced: true,
+                        trigger: {
+                            target: 'useCardToTarget'
+                        },
+                        priority: 15,
+                        filter: function(event, player) {
+                            if(!player.storage.mia_rujing || 
+                                player.storage.mia_rujing.state !== 'yin') return false;
+                            return event.card && lib.filter.targetEnabled2(event.card, event.player, player);
+                        },
+                        content: function() {
+                            'step 0'
+                            var num = trigger.targets ? trigger.targets.length : 1;
+                            player.draw(num);
+                            game.log(player, '触发【入境】：摸', num, '张牌');
+                            'step 1'
+                            trigger.getParent().cancel();
+                            game.log(player, '令', trigger.card, '无效');
+                        }
+                    },
+                    yang: {
+                        forced: true,
+                        trigger: {
+                            player: 'useCardBefore'
+                        },
+                        priority: 15,
+                        filter: function(event, player) {
+                            if(!player.storage.mia_rujing || 
+                               player.storage.mia_rujing.state !== 'yang') return false;
+                            if(!event.targets || !event.targets.length) {
+                                if(event.card.name == 'sha') return true;
+                                return false;
+                            }
+                            return true;
+                        },
+                        content: function() {
+                            'step 0'
+                            var targetNum;
+                            if(trigger.card.selectTarget) {
+                                targetNum = trigger.card.selectTarget;
+                            } else if(trigger.targets && trigger.targets.length) {
+                                targetNum = trigger.targets.length;
+                            } else if(trigger.card.name == 'sha') {
+                                targetNum = 1;
+                            } else {
+                                targetNum = 0;
+                            }
+
+                            if(targetNum <= 0) {
+                                event.finish();
+                                return;
+                            }
+
+                            if(player.countCards('h') < targetNum) {
+                                trigger.cancel();
+                                player.loseHp();
+                                game.log(player, '触发【入境】：手牌不足，令', trigger.card, '无效并失去1点体力');
+                                event.finish();
+                                return;
+                            }
+
+                            event.num = targetNum;
+                            game.log(player, '触发【入境】：需弃置', targetNum, '张手牌');
+                            player.chooseToDiscard('h', targetNum, true);
+                        }
+                    }
+                },
+                mark: true,
+                marktext: '☯',
+                intro: {
+                    content: function(storage, player) {
+                        if(!player.storage.mia_rujing) return '未初始化';
+                        var state = player.storage.mia_rujing.state;
+                        var suits = player.storage.mia_rujing.suits.map(suit => get.translation(suit)).join('、');
+                        return '当前状态：' + (state === 'yin' ? '阴' : '阳') + 
+                               '<br>当前花色：' + suits;
+                    }
+                }
+            },
+            mia_qianmeng: {
 				trigger: {
 					global: "phaseBefore",
 					player: "enterGame",
@@ -11821,7 +11933,7 @@ game.import("character", function () {
 							"prompt",
 							"暴拳：防止即将对" +
 								get.translation(trigger.player) +
-								"造成的伤害，或失去1点体力上限并令此伤害+2"
+								"造成的伤害并摸4张牌，或增加一点体力上限并令此伤害+2"
 						)
 						.set("choice", get.attitude(player, trigger.player) >= 0 ? 0 : 1)
 						.set("ai", function () {
@@ -11829,9 +11941,9 @@ game.import("character", function () {
 						});
 					"step 1";
 					if (result.control == "增加伤害") {
-						player.loseMaxHp();
+						player.gainMaxHp();
 						trigger.num += 2;
-					} else trigger.cancel();
+					} else trigger.cancel(); player.draw(4);
 				},
 				ai: {
 					effect: {
@@ -11863,8 +11975,8 @@ game.import("character", function () {
 						target
 							.chooseControl()
 							.set("choiceList", [
-								"令" + name + "摸一张牌",
-								"回复1点体力，然后交给" + name + "一张牌",
+								"令" + name + "摸四张牌",
+								"令" + name + "回复2点体力，然后交给" + name + "一张牌",
 							])
 							.set("ai", function () {
 								return 1;
@@ -11872,10 +11984,10 @@ game.import("character", function () {
 					}
 					"step 1";
 					if (result.index == 0) {
-						player.draw();
+						player.draw(4);
 						event.finish();
 					} else {
-						target.recover();
+						player.recover(2);
 					}
 					"step 2";
 					if (target != player && target.countCards("he") > 0) {
@@ -11897,6 +12009,104 @@ game.import("character", function () {
 					},
 				},
 			},
+            yusa_zhumeng: {
+                trigger: {player: 'phaseZhunbeiBegin'},
+                forced: true,
+                locked: true,
+                zhuanhuanji: true,
+                marktext: '☯',
+                mark: true,
+                intro: {
+                    content: function(storage) {
+                        return '转换技。准备阶段，'+(storage?'阳：你的弃牌阶段改为摸牌阶段。':'阴：你的判定阶段改为摸牌阶段。')+'出牌阶段开始时，若你的手牌数大于等于你的体力值，你使用牌无次数限制；若你的手牌数小于等于你的体力值，你使用牌无距离限制；若你的手牌数等于你的体力值，你于回合结束后获得一个额外回合。';
+                    }
+                },
+                content: function() {
+                    'step 0'
+                    player.logSkill('yusa_zhumeng');
+                    // 根据当前状态添加对应的临时技能
+                    player.addTempSkill('yusa_zhumeng'+(player.storage.yusa_zhumeng?1:0), 'phaseAfter');
+                    // 切换状态
+                    player.changeZhuanhuanji('yusa_zhumeng');
+                },
+                group: ['yusa_zhumeng_use'],
+            },
+            // 逐梦（阴）：判定阶段改为摸牌阶段
+            yusa_zhumeng0: {
+                trigger: {player: 'phaseJudgeBefore'},
+                forced: true,
+                content: function() {
+                    trigger.cancel();
+                    player.phaseDraw();
+                }
+            },
+            // 逐梦（阳）：弃牌阶段改为摸牌阶段
+            yusa_zhumeng1: {
+                trigger: {player: 'phaseDiscardBefore'},
+                forced: true,
+                content: function() {
+                    trigger.cancel();
+                    player.phaseDraw();
+                }
+            },
+            // 出牌阶段效果
+            yusa_zhumeng_use: {
+                trigger: {player: 'phaseUseBefore'},
+                forced: true,
+                filter: function(event, player) {
+                    return true;
+                },
+                content: function() {
+                    var handNum = player.countCards('h');
+                    var hp = player.hp;
+                    
+                    if(handNum >= hp) {
+                        player.addTempSkill('yusa_zhumeng_unlimited', 'phaseUseAfter');
+                    }
+                    if(handNum <= hp) {
+                        player.addTempSkill('yusa_zhumeng_range', 'phaseUseAfter');
+                    }
+                    if(handNum == hp) {
+                        player.addTempSkill('yusa_zhumeng_extra', 'phaseAfter');
+                    }
+                }
+            },
+            // 无次数限制效果
+            yusa_zhumeng_unlimited: {
+                mod: {
+                    cardUsable: function(card, player) {
+                        return Infinity;
+                    }
+                },
+                mark: true,
+                intro: {
+                    content: '使用牌无次数限制'
+                }
+            },
+            // 无距离限制效果
+            yusa_zhumeng_range: {
+                mod: {
+                    targetInRange: function() {
+                        return true;
+                    }
+                },
+                mark: true,
+                intro: {
+                    content: '使用牌无距离限制'
+                }
+            },
+            // 额外回合效果
+            yusa_zhumeng_extra: {
+                trigger: {player: 'phaseEnd'},
+                forced: true,
+                content: function() {
+                    player.insertPhase();
+                },
+                mark: true,
+                intro: {
+                    content: '回合结束后获得一个额外回合'
+                }
+            },
 			yusa_misa: {
 				charlotte: true,
 				trigger: { player: "useSkillAfter" },
@@ -11909,6 +12119,7 @@ game.import("character", function () {
 				},
 				content() {
 					player.turnOver();
+					player.draw(4);
 				},
 				ai: {
 					combo: "yusa_yanyi",
@@ -11926,8 +12137,112 @@ game.import("character", function () {
 				},
 				content() {
 					player.turnOver();
+					player.recover(2);
 				},
 			},
+            misa_hunying: {
+                trigger: {player: 'damageEnd'},
+                forced: true,
+                locked: true,
+                zhuanhuanji: true,
+                marktext: '☯',
+                mark: true,
+                intro: {
+                    content: function(storage) {
+                        return '转换技。当你受到伤害后，'+(storage?'阳：当你连续使用两张不同花色的牌时，你获得另外两张不同花色的牌。':'阴：当你连续使用一种类别的牌时，你获得另外两种类别的牌。');
+                    },
+                },
+                content: function() {
+                    'step 0'
+                    player.logSkill('misa_hunying');
+                    player.addTempSkill('misa_hunying'+(player.storage.misa_hunying?1:0), {player: 'phaseAfter'});
+                    player.changeZhuanhuanji('misa_hunying');
+                },
+            },
+            // 混影（阴）：连续使用一种类别获得其他类别
+            misa_hunying0: {
+                init: function(player) {
+                    if(!player.storage.misa_hunying0) player.storage.misa_hunying0 = [];
+                },
+                trigger: {player: 'useCardAfter'},
+                forced: true,
+                filter: function(event, player) {
+                    return true;
+                },
+                content: function() {
+                    'step 0'
+                    var currentType = get.type(trigger.card, 'trick');
+                    player.storage.misa_hunying0.push(currentType);
+                    
+                    if(player.storage.misa_hunying0.length >= 2) {
+                        var lastTwo = player.storage.misa_hunying0.slice(-2);
+                        if(lastTwo[0] == lastTwo[1]) {
+                            var types = ['basic', 'trick', 'equip'];
+                            var otherTypes = types.filter(type => type != lastTwo[0]);
+                            
+                            for(var i=0; i<2; i++){
+                                var card = get.cardPile2(function(card) {
+                                    return get.type(card, 'trick') == otherTypes[i];
+                                });
+                                if(card) {
+                                    player.gain(card, 'gain2');
+                                    game.log(player, '获得了一张', otherTypes[i], '牌');
+                                }
+                            }
+                            player.storage.misa_hunying0.length = 0;
+                        }
+                    }
+                    
+                    if(player.storage.misa_hunying0.length > 2) {
+                        player.storage.misa_hunying0.shift();
+                    }
+                },
+                onremove: function(player) {
+                    delete player.storage.misa_hunying0;
+                },
+            },
+            // 混影（阳）：连续使用两张不同花色获得其他花色
+            misa_hunying1: {
+                init: function(player) {
+                    if(!player.storage.misa_hunying1) player.storage.misa_hunying1 = [];
+                },
+                trigger: {player: 'useCardAfter'},
+                forced: true,
+                filter: function(event, player) {
+                    return true;
+                },
+                content: function() {
+                    'step 0'
+                    var currentSuit = get.suit(trigger.card);
+                    player.storage.misa_hunying1.push(currentSuit);
+                    
+                    if(player.storage.misa_hunying1.length >= 2) {
+                        var lastTwo = player.storage.misa_hunying1.slice(-2);
+                        if(lastTwo[0] != lastTwo[1]) {
+                            var suits = ['heart', 'diamond', 'club', 'spade'];
+                            var otherSuits = suits.filter(suit => !lastTwo.includes(suit));
+                            
+                            for(var i=0; i<2; i++){
+                                var card = get.cardPile2(function(card) {
+                                    return get.suit(card) == otherSuits[i];
+                                });
+                                if(card) {
+                                    player.gain(card, 'gain2');
+                                    game.log(player, '获得了一张', otherSuits[i], '牌');
+                                }
+                            }
+                            player.storage.misa_hunying1.length = 0;
+                        }
+                    }
+                    
+                    if(player.storage.misa_hunying1.length > 2) {
+                        player.storage.misa_hunying1.shift();
+                    }
+                },
+                onremove: function(player) {
+                    delete player.storage.misa_hunying1;
+                },
+            },
 			misa_yehuo: {
 				charlotte: true,
 				trigger: { global: "phaseDrawBegin1" },
@@ -11966,12 +12281,12 @@ game.import("character", function () {
 						player
 							.chooseControl()
 							.set("choiceList", [
-								"对" + name + "造成1点火属性伤害",
+								"对" + name + "造成3点火属性伤害",
 								"令" + name + "此出牌阶段的额定摸牌数改为0",
 							]);
 					} else event.finish();
 					"step 2";
-					if (result.index == 0) trigger.player.damage("fire");
+					if (result.index == 0) trigger.player.damage("fire", 3);
 					else trigger.changeToZero();
 				},
 				ai: {
@@ -11990,7 +12305,7 @@ game.import("character", function () {
 				},
 				forced: true,
 				content() {
-					player.draw();
+					player.draw(4);
 				},
 			},
 			nsxuezhu: {
@@ -12313,8 +12628,9 @@ game.import("character", function () {
 				content() {
 					"step 0";
 					player.awakenSkill("umi_qihuan");
+					player.recover(999);
+					player.draw(7);
 					player.reinitCharacter("key_umi", "key_umi2", false);
-					player.recover(game.countGroup() || 1);
 					if (!game.dead.length) event.finish();
 					"step 1";
 					var chara = [];
@@ -12363,7 +12679,7 @@ game.import("character", function () {
 						player.chooseControl(list).set("prompt", "选择获得一个技能");
 					}
 					"step 4";
-					//player.addSkills(result.control,get.groupnature(event.temp.group)||'key');
+					player.addSkills(result.control,get.groupnature(event.temp.group)||'key');
 					player.addSkills(result.control);
 					var info = get.info(result.control);
 					if (info.zhuSkill) {
@@ -12371,7 +12687,7 @@ game.import("character", function () {
 						player.storage.zhuSkill_umi_qihuan.push(result.control);
 					}
 					event.chosen.push(result.control);
-					if (event.chosen.length < 2) event.goto(2);
+					if (event.chosen.length < 7) event.goto(7);
 				},
 				ai: {
 					order: 10,
@@ -12771,7 +13087,6 @@ game.import("character", function () {
 			},
 			yui_lieyin(player) {
 				if (player.storage._ichiban_no_takaramono)
-					return "锁定技，出牌阶段开始时，你可选择一项：①本阶段内的红色牌均视为【杀】；②本阶段内的【杀】均视为【决斗】。";
 				return "锁定技，转换技。出牌阶段开始时，阴: 本阶段内的红色牌均 视为【杀】，且你使用杀时无距离限制且伤害+1；阳: 本阶段内的【杀】均视为【决斗】。当你使用决斗时，你摸一张牌。";
 			},
 			yuzuru_kunfen(player) {
@@ -12933,7 +13248,7 @@ game.import("character", function () {
 			umi_shiroha: "轮回 - 延时效果",
 			umi_qihuan: "七幻",
 			umi_qihuan_info:
-				"限定技，当你处于濒死状态时，你可以移去此武将牌。若如此做，你回复X点体力（X为场上势力数）。然后，你可获得场上已死亡角色武将牌上的至多两个技能。",
+				"限定技，当你处于濒死状态时，你可以移去此武将牌。若如此做，你回复7点体力并摸7张牌。然后，你可获得场上已死亡角色武将牌上的至多七个技能。",
 			komari_tiankou: "甜口",
 			komari_tiankou_info:
 				"锁定技，当你使用红色的非伤害性基本牌/锦囊牌选择目标时，或成为其他角色使用的这些牌的目标时，你选择一项：1.摸一张牌；2.为此牌增加一个目标。",
@@ -12947,6 +13262,12 @@ game.import("character", function () {
 			yusa_yanyi: "演艺",
 			yusa_yanyi_info:
 				"出牌阶段限一次，你可以指定至多X名与你距离不大于你的体力值的角色。这些角色选择一项：①令你摸一张牌。②回复1点体力，然后交给你一张牌。（X为你的攻击范围且至少为1）",
+			yusa_zhumeng: "逐梦",
+			yusa_zhumeng_info:
+			    "锁定技，转换技。准备阶段，阴: 你的判定阶段改为摸牌阶段。阳: 你的弃牌阶段改为摸牌阶段。出牌阶段开始时，若你的手牌数大于等于你的体力值，你使用牌无次数限制。若你的手牌数小于等于你的体力值，你使用牌无距离限制。若你的手牌数等于等于你的体力值，你于回合结束后获得一个额外回合。",
+			misa_hunying: "魂映",
+			misa_hunying_info:
+			    "锁定技，转换技。当你受到伤害后，阴: 当你连续使用一种不同类别的牌时，你获得另外两种种类别的牌。阳: 当你连续使用两张不同花色的牌时，你获得另外两张不同花色的牌。",
 			misa_yehuo: "业火",
 			misa_yehuo_info:
 				"一名角色的摸牌阶段开始时，若其在你的攻击范围内，你可以弃置X张牌并选择一项：①对其造成1点火属性伤害。②令其于此摸牌阶段放弃摸牌。（X为你与其的的距离）",
@@ -12956,7 +13277,7 @@ game.import("character", function () {
 			misa_yusa_info: "当你发动的〖业火〗结算完成后，你可以将武将牌翻面。",
 			masato_baoquan: "暴拳",
 			masato_baoquan_info:
-				"锁定技，当你即将造成伤害时，你选择一项：1.令此伤害+2并减1点体力上限。2.防止此伤害。",
+				"锁定技，当你即将造成伤害时，你选择一项：1.令此伤害+2并增加1点体力上限。2.防止此伤害并摸4张牌。",
 			iwasawa_yinhang: "引吭",
 			iwasawa_yinhang_info: "锁定技，当你的体力值变化1点时，你可以令至多两名角色摸一张牌。",
 			iwasawa_mysong: "My Song",
@@ -13127,12 +13448,12 @@ game.import("character", function () {
 			ao_diegui: "蝶归",
 			ao_diegui_backup: "蝶归",
 			ao_diegui_info: "出牌阶段限一次，你可以将一张「蝶」交给一名角色，该角色摸两张牌并复原武将牌。",
-			yuzuru_wuxin: "无心",
+			yuzuru_wuxin: "交心",
 			yuzuru_wuxin_info:
 				"结束阶段，你可以选择一项：失去1点体力并令一名角色摸两张牌，或弃置两张牌并回复1点体力。",
 			yuzuru_deyi: "得义",
 			yuzuru_deyi_info:
-				"觉醒技，当有其他角色死亡后，你减1点体力上限并回复1点体力，失去技能〖无心〗，获得技能〖往生〗〖困奋〗和〖去疾〗。",
+				"觉醒技，当有其他角色死亡后，你减1点体力上限并回复1点体力，失去技能〖交心〗，获得技能〖往生〗〖困奋〗和〖去疾〗。",
 			yuzuru_wangsheng: "往生",
 			yuzuru_wangsheng_info:
 				"觉醒技，当你即将死亡时，你防止此次死亡。你可以将任意张牌交给一名其他角色，然后减1点体力上限并将体力回复至2点，修改技能〖困奋〗和〖去疾〗。",
@@ -13354,6 +13675,9 @@ game.import("character", function () {
 			mia_shihui: "时迴",
 			mia_shihui_info:
 				"锁定技，摸牌阶段，你改为摸X+1张牌（X为你上回合弃置的牌数）；结束阶段，你弃置一张牌并回复1点体力。",
+			mia_rujing: "入境",
+			mia_rujing_info:
+			    "锁定技。当你手牌的花色数变化时，阴: 你受到牌的目标时，你摸X张牌然后令此牌无效。阳: 你使用牌指定目标时，你弃置X张牌。X为指定的目标数。",
 			mia_qianmeng: "潜梦",
 			mia_qianmeng_info:
 				"使命技。①游戏开始时，你摸一张牌，然后将一张牌置于牌堆的正中央。②使命：当有角色获得“潜梦”牌时，其将此牌交给你。你将体力值回复至上限，失去〖时迴〗并获得〖风发〗。③失败：当你死亡时，你可令一名角色获得牌堆中所有与“潜梦”牌花色点数相同的牌。",
@@ -13382,12 +13706,12 @@ game.import("character", function () {
 				"锁定技。①你的手牌上限+X（X为你的护甲数）。②当你于回合内使用第Y张牌时，若此牌与你上回合使用的第Y张牌类型相同，则你摸一张牌。",
 			erika_yousheng: "佑生",
 			erika_yousheng_info:
-				"使命技。①限定技。一轮游戏开始时，你可以选择至多两名其他角色。你增加4点体力上限，回复4点体力，摸4张牌并增加16点护甲。②当你〖佑生①〗选择的角色成为【杀】或伤害类锦囊牌的目标时，你可以弃置X张牌并将此目标转移给自己（X为你本轮内发动过〖佑生②〗的次数）。此牌结算结束后，你可令一名原目标角色获得此牌。③成功：当你失去最后的护甲后，若你已发动过〖佑生①〗，则你和所有〖佑生①〗选择的角色各摸四张牌。④失败：当一名〖佑生①〗选择的角色因【杀】或伤害类锦囊牌而受到伤害而进入濒死状态时，你失去所有护甲并弃置等量的牌。",
+				"锁定技，使命技。①限定技。一轮游戏开始时，你可以选择至多两名其他角色。你增加4点体力上限，回复4点体力，摸4张牌并增加16点护甲。②当你〖佑生①〗选择的角色成为【杀】或伤害类锦囊牌的目标时，你可以弃置X张牌并将此目标转移给自己（X为你本轮内发动过〖佑生②〗的次数）。此牌结算结束后，你可令一名原目标角色获得此牌。③成功：当你失去最后的护甲后，若你已发动过〖佑生①〗，则你和所有〖佑生①〗选择的角色各摸四张牌。④失败：当一名〖佑生①〗选择的角色因【杀】或伤害类锦囊牌而受到伤害而进入濒死状态时，你失去所有护甲并弃置等量的牌。",
 			erika_yousheng_append:
 				'<span style="font-family: yuanli">Death is not the end of life, but the completion of life.</span>',
 			satomi_luodao: "落刀",
 			satomi_luodao_info:
-				"当你使用【杀】指定目标后，你可以展示目标角色的所有手牌。若其中：有【闪】，则你弃置其中的一张【闪】；没有【闪】，则你摸两张牌。",
+				"当你使用【杀】指定目标后，你可以展示目标角色的所有手牌。若其中：有【闪】，则你弃置其中的一张【闪】；没有【闪】，则你摸四张牌。",
 			satomi_daohai: "稻海",
 			satomi_daohai_info:
 				"结束阶段，若你本回合内弃置过牌，则你可以视为使用一张【五谷丰登】。然后你可以将你于此【五谷丰登】中得到的牌当做【乐不思蜀】使用。",
