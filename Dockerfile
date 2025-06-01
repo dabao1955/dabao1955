@@ -1,4 +1,4 @@
-FROM jlesage/baseimage-gui:alpine-3.19-v4
+FROM edgelevel/alpine-xfce-vnc:latest
 
 LABEL org.opencontainers.image.source="https://github.com/dabao1955/dabao1955"
 
@@ -6,12 +6,11 @@ ENV \
     HOME="/config" \
     TITLE="Telegram" \
     APP_NAME="Telegram" \
-    DISPLAY=":1" \
     ENABLE_CJK_FONT=1 \
     TZ=Asia/Shanghai
 
 RUN \
-    busybox sed -i 's#v3.19#edge#g' /etc/apk/repositories && \
+    busybox sed -i 's#v3.16#edge#g' /etc/apk/repositories && \
     apk upgrade && \
     apk del openbox && \
     apk add --no-cache telegram-desktop xfce4 nano fastfetch font-noto-cjk openjdk21-jre-headless && \
@@ -27,5 +26,5 @@ RUN \
     printf "#!/bin/sh\n\nexec startxfce" > /startapp.sh && \
     chmod 777 -v /startapp.sh
 
-EXPOSE 5800
 EXPOSE 5900
+EXPOSE 6080
