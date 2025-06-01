@@ -6,13 +6,15 @@ ENV \
     CUSTOM_PORT="8080" \
     CUSTOM_HTTPS_PORT="8181" \
     HOME="/config" \
-    TITLE="Telegram"
-
+    TITLE="Telegram" \
+    DISPLAY=":1" \
+    ENABLE_CJK_FONT=1 \
+    TZ=Asia/Shanghai
 
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
     apt-get update && apt-get install -y --no-install-recommends --no-install-suggests --fix-missing lxde* telegram-desktop \
-    default-jre-headless fonts-noto-cjk htop neofetch \
+    openjdk-17-jre-headless fonts-noto-cjk htop neofetch \
     desktop-file-utils wget tar xz-utils && \
     apt clean && \
     rm -rf /tmp/* \
