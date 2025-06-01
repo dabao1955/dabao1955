@@ -3,8 +3,6 @@ FROM jlesage/baseimage-gui:alpine-3.19-v4
 LABEL org.opencontainers.image.source="https://github.com/dabao1955/dabao1955"
 
 ENV \
-    CUSTOM_PORT="8080" \
-    CUSTOM_HTTPS_PORT="8181" \
     HOME="/config" \
     TITLE="Telegram" \
     APP_NAME="Telegram" \
@@ -29,4 +27,5 @@ RUN \
     printf "#!/bin/sh\n\nexec startxfce" > /startapp.sh && \
     chmod 777 -v /startapp.sh
 
-EXPOSE 8080
+EXPOSE 5800
+EXPOSE 5900
