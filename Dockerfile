@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:alpine321
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
 LABEL org.opencontainers.image.source="https://github.com/dabao1955/dabao1955"
 
@@ -11,13 +11,10 @@ ENV \
 
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
-    busybox sed -i 's#v3.21#edge#g' /etc/apk/repositories && \
-    apk del openbox && \
-    apk add --no-cache telegram-desktop xfce4 nano fastfetch font-noto-cjk openjdk21-jre-headless && \
-    busybox wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
-    busybox tar -xvf out.tar.gz && \
-    busybox mv ./CrashCore /usr/local/bin/clash && \
-    ln -sfv /usr/bin/xfwm4 /usr/bin/openbox && \
+    apt-get update && apt-get install -y --no-install-recommends --no-install-suggests --fix-missing lxde* telegram-desktop \
+    default-jre-headless fonts-noto-cjk htop neofetch \
+    desktop-file-utils wget tar xz-utils && \
+    apt clean && \
     rm -rf /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/* \
