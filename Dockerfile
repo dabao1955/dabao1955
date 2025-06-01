@@ -12,7 +12,6 @@ ENV \
     ENABLE_CJK_FONT=1 \
     TZ=Asia/Shanghai
 
-SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
     busybox sed -i 's#v3.21#edge#g' /etc/apk/repositories && \
     apk del openbox && \
