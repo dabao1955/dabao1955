@@ -11,12 +11,13 @@ ENV \
 
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 RUN \
-    apk add --no-cache telegram-desktop lxde nano fastfetch fonts-noto-cjk openjdk21-jre-headless && \
+    apk del openbox && \
+    apk add --no-cache telegram-desktop xfce4 nano fastfetch font-noto-cjk openjdk21-jre-headless && \
     busybox wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
     busybox tar -xvf out.tar.gz && \
     busybox mv ./CrashCore /usr/local/bin/clash && \
-    rm -rf \
-    /tmp/* \
+    ln -sfv /usr/bin/xfwm4 /usr/bin/openbox
+    rm -rf /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/* \
     out.tar.gz && \
