@@ -13,8 +13,9 @@ ENV \
     TZ=Asia/Shanghai
 
 RUN \
-    busybox sed -i 's#v3.21#edge#g' /etc/apk/repositories && \
+    busybox sed -i 's#v3.19#edge#g' /etc/apk/repositories && \
     apk upgrade && \
+    apk del openbox && \
     apk add --no-cache telegram-desktop xfce4 nano fastfetch font-noto-cjk openjdk21-jre-headless && \
     busybox wget https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
     busybox tar -xvf out.tar.gz && \
