@@ -13,8 +13,8 @@ RUN \
     busybox sed -i 's#v3.16#edge#g' /etc/apk/repositories && \
     apk upgrade && \
     apk del openbox && \
-    apk add --no-cache openssl ca-certificates telegram-desktop xfce4 nano fastfetch font-noto-cjk openjdk21-jre-headless && \
-    busybox wget http://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
+    apk add --no-cache openssl wget ca-certificates telegram-desktop xfce4 nano fastfetch font-noto-cjk openjdk21-jre-headless && \
+    wget --no-check-certificate https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
     busybox tar -xvf out.tar.gz && \
     busybox mv -v ./CrashCore /usr/local/bin/clash && \
     ln -sfv /usr/bin/xfwm4 /usr/bin/openbox && \
