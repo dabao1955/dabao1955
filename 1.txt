@@ -1,0 +1,1 @@
+lk2nd，或者Android Bootloader和edk2在Android设备中启动时(如小米手机刷windows时通常会在boot分区刷入edk2.img)的功能或者作用是一样的吗？
