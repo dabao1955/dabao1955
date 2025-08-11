@@ -32,7 +32,7 @@ jobs:
     - name: Configure and build
       run: |
         export PATH="$HOME/clang/bin":${PATH} 
-        make CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" CC=clang LD=ld.lld O=out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8
+        make ARCH=arm64 CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" CC=clang LD=ld.lld O=out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8
     - name: clean
       run: |
         rm -rf -v $(find out -name *.o)
