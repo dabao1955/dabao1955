@@ -13,7 +13,7 @@ RUN \
     busybox sed -i 's#v3.16#edge#g' /etc/apk/repositories && \
     apk upgrade
 RUN \
-    apk upgrade
+    apk upgrade && \
     apk del openbox && \
     apk add --no-cache openssl wget ca-certificates telegram-desktop xfce4 xfce4-terminal papirus-icon-theme nano fastfetch font-noto-cjk openjdk21-jre-headless && \
     wget --no-check-certificate https://github.com/DustinWin/proxy-tools/releases/download/Clash-Premium/clashpremium-nightly-linux-amd64.tar.gz -O out.tar.gz && \
