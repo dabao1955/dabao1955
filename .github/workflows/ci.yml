@@ -16,15 +16,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        repository: SekaiMoeStudio/android_kernel_test_6.1
+        
     - name: Setup dep
       run: |
         apt-get update
-        apt-get install curl bison flex make binutils-aarch64-linux-gnu dwarves git aria2c pahole zip perl make gcc python3 python-is-python3 bc libssl-dev libelf-dev cpio tar xz-utils -y
+        apt-get install curl bison flex make binutils-aarch64-linux-gnu dwarves git aria2 pahole zip perl make gcc python3 python-is-python3 bc libssl-dev libelf-dev cpio tar xz-utils -y
     - name: Setup clang
       run: |
         mkdir -p $HOME/clang
         aria2c https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android16-release/clang-r543779.tar.gz -o clang.tar.gz
         tar -xzf clang.tar.gz -C $HOME/clang
+        rm -v clang.tar.gz
     - name: Configure and build
       run: |
         export PATH="$HOME/clang/bin":${PATH} 
