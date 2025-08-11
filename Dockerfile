@@ -11,7 +11,7 @@ ENV \
 
 RUN \
     busybox sed -i 's#v3.16#edge#g' /etc/apk/repositories && \
-    apk upgrade &&
+    apk upgrade
 RUN \
     apk upgrade
     apk del openbox && \
