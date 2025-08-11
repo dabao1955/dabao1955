@@ -26,7 +26,7 @@ jobs:
     - name: Setup clang
       run: |
         mkdir -p $HOME/clang
-        aria2c https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android16-release/clang-r543779.tar.gz -o clang.tar.gz
+        aria2c https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android16-release/clang-r547379.tar.gz -o clang.tar.gz
         tar -xzf clang.tar.gz -C $HOME/clang
         rm -v clang.tar.gz
     - name: Configure and build
