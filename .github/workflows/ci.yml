@@ -31,6 +31,7 @@ jobs:
         rm -v clang.tar.gz
     - name: Configure and build
       run: |
+        mkdir -p -v out
         export PATH="$HOME/clang/bin":${PATH} 
         make ARCH=arm64 CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" CC=clang LD=ld.lld O=out KCFLAGS+=-Wno-error V=1 gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8 >out/log.txt
         test -f out/.config && cp out/.config out/config -v
