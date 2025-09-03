@@ -31,21 +31,21 @@ jobs:
         rm -v clang.tar.gz
     - name: Configure and build
       run: |
-        mkdir -p -v out
-        touch out/build.log
+        mkdir -p -v ../out
+        touch ../out/build.log
         export PATH="$HOME/clang/bin":${PATH} 
-        make ARCH=arm64 V=1 CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" LLVM=1 O=out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8 >./out/build.log
-        test -f out/.config && cp out/.config out/config -v
+        make ARCH=arm64 V=1 SH="bash -x" CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" LLVM=1 O=../out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8 >./out/build.log
+        test -f ../out/.config && cp ../out/.config ../out/config -v
     - name: clean
       run: |
-        rm -rf -v $(find out -name *.o) >./out/delete.log
-        rm -rf -v $(find out -name *.a) >./out/delete.log
-        rm -rf -v source/drivers
+        rm -rf -v $(find out -name *.o) >../out/delete.log
+        rm -rf -v $(find out -name *.a) >../out/delete.log
+        rm -rf -v ../out/source*
     - uses: actions/upload-artifact@v4
       with:
         name: boot
-        path: out/arch/arm64/boot/Image
+        path: ../out/arch/arm64/boot/Image
     - uses: actions/upload-artifact@v4
       with:
         name: out
-        path: out
+        path: ../out
