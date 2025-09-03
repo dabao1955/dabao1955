@@ -22,7 +22,7 @@ jobs:
     - name: Setup dep
       run: |
         apt-get update
-        apt-get install curl bison flex make binutils-aarch64-linux-gnu dwarves git aria2 pahole zip perl make gcc python3 python-is-python3 bc libssl-dev libelf-dev cpio tar xz-utils -y
+        apt-get install curl bison flex make dwarves git aria2 pahole zip perl make gcc binutils python3 python-is-python3 bc libssl-dev libelf-dev cpio tar xz-utils -y
     - name: Setup clang
       run: |
         mkdir -p $HOME/clang
@@ -32,13 +32,14 @@ jobs:
     - name: Configure and build
       run: |
         mkdir -p -v out
+        touch out/build.log
         export PATH="$HOME/clang/bin":${PATH} 
-        make ARCH=arm64 CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" LLVM=1 O=out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8
+        make ARCH=arm64 V=1 CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" LLVM=1 O=out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8 >./out/build.log
         test -f out/.config && cp out/.config out/config -v
     - name: clean
       run: |
-        rm -rf -v $(find out -name *.o)
-        rm -rf -v $(find out -name *.a)
+        rm -rf -v $(find out -name *.o) >./out/delete.log
+        rm -rf -v $(find out -name *.a) >./out/delete.log
         rm -rf -v source/drivers
     - uses: actions/upload-artifact@v4
       with:
