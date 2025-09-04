@@ -35,7 +35,7 @@ jobs:
         mkdir -p -v out
         touch out/build.log
         export PATH="$HOME/clang/bin":${PATH} 
-        cd kernel && make ARCH=arm64 V=1 SH="bash -x" CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" LLVM=1 O=out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8 >./out/build.log
+        cd kernel && make ARCH=arm64 V=1 SH="bash -x" CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabihf-" LLVM=1 O=out KCFLAGS+=-Wno-error gki_defconfig vendor/pineapple_GKI.config vendor/oplus/pineapple_GKI.config all -j8 >../out/build.log
         test -f out/.config && cp out/.config out/config -v
     - name: clean
       run: |
