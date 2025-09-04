@@ -6791,7 +6791,7 @@ game.import("character", function () {
 					"step 2";
 					var evt = event.getParent("phase");
 					if (evt && evt.after) {
-						var next = player.gainHp();
+						var next = player.recover();
 						event.next.remove(next);
 						evt.after.push(next);
 					}
@@ -7798,6 +7798,8 @@ game.import("character", function () {
 					if (info && info.length) player.addAdditionalSkill("kud_qiaoshou_equip", info);
 					player.draw();
 					game.log(player, "声明了", "#y" + get.translation(name));
+					player.draw(4);
+					player.recover(1);
 				},
 				ai: {
 					result: {
@@ -7933,7 +7935,8 @@ game.import("character", function () {
 					var info = lib.card[name].skills;
 					if (info && info.length) player.addAdditionalSkill("kud_qiaoshou_equip", info);
 					game.log(player, "声明了", "#y" + get.translation(name));
-					await player.draw(4);
+					player.draw(4);
+					player.recover(1);
 				},
 			},
 			kud_buhui: {
@@ -7960,6 +7963,8 @@ game.import("character", function () {
 					"step 1";
 					var num = 7 - player.hp;
 					if (num) player.recover(num);
+					player.draw(num);
+					player.gainMaxHp();
 				},
 				derivation: "riki_chongzhen",
 				ai: {
@@ -9316,7 +9321,7 @@ game.import("character", function () {
 						["yuzuru_kunfen", "yuzuru_quji", "yuzuru_wangsheng"],
 						["yuzuru_wuxin"]
 					);
-					player.loseMaxHp();
+					player.gainMaxHp();
 					player.recover();
 				},
 			},
@@ -9464,7 +9469,7 @@ game.import("character", function () {
 					);
 				},
 				content() {
-					player.draw();
+					player.draw(2);
 				},
 			},
 			ao_kuihun: {
@@ -11408,7 +11413,8 @@ game.import("character", function () {
 					return player.countCards("h") < player.maxHp;
 				},
 				content() {
-					player.draw();
+					player.draw(2);
+					player.recover(1);
 				},
 			},
 			tsumugi_huilang: {
@@ -12594,7 +12600,6 @@ game.import("character", function () {
 					player.awakenSkill("umi_qihuan");
 					var num = 7 - player.hp;
 					if (num) player.recover(num);
-					player.draw(7);
 					player.reinitCharacter("key_umi", "key_umi2", false);
 					if (!game.dead.length) event.finish();
 					"step 1";
@@ -13712,7 +13717,7 @@ game.import("character", function () {
 			kud_qiaoshou_end: "巧手",
 			kud_qiaoshou_backup: "巧手",
 			kud_qiaoshou_info:
-				"出牌阶段/结束阶段，若你没有“巧”，则你可以将一张手牌作为“巧”置于武将牌上并摸两张牌，且视为装备了一张你选择的武器牌或进攻坐骑/防具牌或防御坐骑直到“巧”进入弃牌堆。出牌阶段结束时/准备阶段开始时，你将“巧”置入弃牌堆并摸等量的牌",
+				"出牌阶段/结束阶段，若你没有“巧”，则你可以将一张手牌作为“巧”置于武将牌上并摸四张牌并回复一点体力，且视为装备了一张你选择的武器牌或进攻坐骑/防具牌或防御坐骑直到“巧”进入弃牌堆。出牌阶段结束时/准备阶段开始时，你将“巧”置入弃牌堆并摸等量的牌",
 			kud_buhui: "不悔",
 			kud_buhui_info:
 				"限定技，当你进入濒死状态时，你可以弃置“巧”和装备区内的所有牌（至少一张）并摸等量的牌，将体力回复至7点，获得技能〖重振〗。",
