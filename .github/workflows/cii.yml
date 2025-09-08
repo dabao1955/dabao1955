@@ -19,6 +19,7 @@ jobs:
       - name: Pull and Merge
         run: |
           git clone https://github.com/LineageOS/android_kernel_oneplus_sm8650 bacon
+          cd bacon
           git remote set-url origin https://github.com/sekaimoestudio/android_kernel_test_6.1
           git branch -M bacon
           
@@ -26,7 +27,7 @@ jobs:
         continue-on-error: true
         uses: ad-m/github-push-action@master
         with:
-          directory: pmaports
+          directory: bacon
           force: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: bacon
