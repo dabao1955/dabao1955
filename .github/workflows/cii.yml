@@ -1,0 +1,32 @@
+name: Sync GitLab to GitHub
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Setup Git
+        run: |
+          git config --global user.name "root"
+          git config --global user.email "your_email@example.com"
+      - name: Pull and Merge
+        run: |
+          git clone https://github.com/LineageOS/android_kernel_oneplus_sm8650 bacon
+          git remote set-url origin https://github.com/sekaimoestudio/android_kernel_test_6.1
+          git branch -M bacon
+          
+      - name: GitHub Push
+        continue-on-error: true
+        uses: ad-m/github-push-action@master
+        with:
+          directory: pmaports
+          force: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: bacon
