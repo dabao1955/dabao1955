@@ -8,7 +8,7 @@ game.import("character", function () {
 			
 		],
 		character: {
-			key_kagari: ["female", "shen", 7, ["kagari_zongsi"], ["key"]],
+			key_kagari: ["female", "shen", 16, ["kagari_zongsi"], ["key"]],
 			key_shiki: ["female", "shen", "3/5", ["shiki_omusubi"], ["key"]],
 			db_key_hina: ["female", "key", 5, ["hina_shenshi", "hina_xingzhi"], ["doublegroup:key:shen"]],
 			
@@ -8317,6 +8317,8 @@ game.import("character", function () {
 						if (_status.event.player.isTurnedOver()) return 0;
 						return 6 - get.value(card);
 					});
+					player.draw(4);
+					player.recover(2);
 					"step 1";
 					if (!result.bool) player.turnOver();
 					player.addTempSkill("nao_duyin2", { player: "phaseAfter" });
@@ -8459,7 +8461,7 @@ game.import("character", function () {
 					return event.skill == "nao_shouqing2";
 				},
 				content() {
-					player.draw();
+					player.draw(4);
 				},
 			},
 			shiorimiyuki_banyin: {
@@ -8727,7 +8729,7 @@ game.import("character", function () {
 			},
 			shizuru_benzhan: {
 				trigger: { global: ["useCard", "respond"] },
-				usable: 1,
+				usable: 9,
 				filter(event, player) {
 					return (
 						Array.isArray(event.respondTo) &&
@@ -9181,7 +9183,7 @@ game.import("character", function () {
 			kanade_benzhan: {
 				audio: 3,
 				trigger: { global: ["useCard", "respond"] },
-				usable: 1,
+				usable: 4,
 				filter(event, player) {
 					return (
 						Array.isArray(event.respondTo) &&
@@ -12600,6 +12602,7 @@ game.import("character", function () {
 					player.awakenSkill("umi_qihuan");
 					var num = 7 - player.hp;
 					if (num) player.recover(num);
+					player.draw(7);
 					player.reinitCharacter("key_umi", "key_umi2", false);
 					if (!game.dead.length) event.finish();
 					"step 1";
@@ -12657,7 +12660,7 @@ game.import("character", function () {
 						player.storage.zhuSkill_umi_qihuan.push(result.control);
 					}
 					event.chosen.push(result.control);
-					if (event.chosen.length < 7) event.goto(7);
+					if (event.chosen.length < 7) event.goto(2);
 				},
 				ai: {
 					order: 10,
@@ -13444,7 +13447,7 @@ game.import("character", function () {
 			kanade_mapo_info: "你可以将一张♥牌当做【麻婆豆腐】使用。你使用的【麻婆豆腐】可以多指定一个目标。",
 			kanade_benzhan: "奔战",
 			kanade_benzhan_info:
-				"每回合限一次。当你使用或打出牌响应其他角色，或其他角色使用或打出牌响应你后，若此牌为：基本牌，你可令一名角色弃置四张牌或令一名角色摸四张牌；非基本牌，你可对一名角色造成2点伤害或令一名其他角色回复2点体力。",
+				"每回合限九次。当你使用或打出牌响应其他角色，或其他角色使用或打出牌响应你后，若此牌为：基本牌，你可令一名角色弃置四张牌或令一名角色摸四张牌；非基本牌，你可对一名角色造成2点伤害或令一名其他角色回复2点体力。",
 			mio_tuifu: "推腐",
 			mio_tuifu_info: "锁定技，当一名角色受到伤害时，你摸一张牌。",
 			mio_tishen: "替身",
@@ -13471,7 +13474,7 @@ game.import("character", function () {
 				"每轮限一次，你可以展示一张♦/♣/♥/♠手牌，然后视为使用一张不计入次数限制和记录的雷【杀】/【闪】/【桃】/【无懈可击】。",
 			shizuru_benzhan: "奔战",
 			shizuru_benzhan_info:
-				"每回合限一次。当你使用或打出牌响应其他角色，或其他角色使用或打出牌响应你后，若此牌为：基本牌，你可令一名角色弃置两张牌或令一名角色摸两张牌；非基本牌，你可对一名角色造成1点伤害或令一名其他角色回复1点体力。",
+				"每回合限四次。当你使用或打出牌响应其他角色，或其他角色使用或打出牌响应你后，若此牌为：基本牌，你可令一名角色弃置四张牌或令一名角色摸四张牌；非基本牌，你可对一名角色造成2点伤害或令一名其他角色回复2点体力。",
 			shiorimiyuki_banyin: "伴音",
 			shiorimiyuki_banyin_info: "当你受到伤害或回复体力后，你可令一名其他角色回复1点体力。",
 			shiorimiyuki_tingxian: "铤险",
@@ -13754,7 +13757,7 @@ game.import("character", function () {
 			nao_shouqing: "守情",
 			nao_shouqing2: "守情",
 			nao_shouqing3: "守情",
-			nao_shouqing_info: "其他角色的出牌阶段内可以对你使用非转化的【桃】。若如此做，其摸一张牌，且本局游戏内的手牌上限+1。",
+			nao_shouqing_info: "其他角色的出牌阶段内可以对你使用非转化的【桃】。若如此做，其摸四张牌，且本局游戏内的手牌上限+4。",
 			key_yuuki: "冰室忧希",
 			yuuki_yicha: "异插",
 			yuuki_yicha_info:
