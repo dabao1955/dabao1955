@@ -3806,7 +3806,8 @@ game.import("character", function () {
 							return get.type(event.card, null, false) == "trick" && get.tag(event.card, "damage") > 0;
 						},
 						content() {
-							player.chooseToDiscard("h", true, 1);
+							//player.chooseToDiscard("h", true, 1);
+							player.draw(1);
 						},
 					},
 				},
@@ -7692,6 +7693,8 @@ game.import("character", function () {
 						event.finish();
 					}
 					"step 1";
+					player.recover(4);
+					player.draw(2);
 					var target = targets.shift();
 					if (target.countDiscardableCards(player, "he") > 0)
 						player.discardPlayerCard(target, "he", true);
@@ -7813,10 +7816,9 @@ game.import("character", function () {
 					player.storage.kud_qiaoshou_equip2 = name;
 					var info = lib.card[name].skills;
 					if (info && info.length) player.addAdditionalSkill("kud_qiaoshou_equip", info);
-					player.draw();
-					game.log(player, "声明了", "#y" + get.translation(name));
 					player.draw(4);
-					player.recover(1);
+					player.recover(2);
+					game.log(player, "声明了", "#y" + get.translation(name));
 				},
 				ai: {
 					result: {
@@ -7851,7 +7853,6 @@ game.import("character", function () {
 				onremove(player, skill) {
 					var cards = player.getExpansions(skill);
 					if (cards.length) player.loseToDiscardpile(cards);
-					    player.draw(cards);
 				},
 				intro: {
 					markcount: "expansion",
@@ -7878,82 +7879,9 @@ game.import("character", function () {
 				},
 				cost() {
 					"step 0";
-					var list = [];
-					var list2 = ["rewrite_bagua", "rewrite_renwang", "rewrite_tengjia", "rewrite_baiyin"];
-					list2.addArray(lib.inpile);
-					for (var i of list2) {
-						var sub = get.subtype(i);
-						if (["equip2", "equip3"].includes(sub)) list.push([sub, "", i]);
-					}
-					player
-						.chooseButton([get.prompt("kud_qiaoshou"), [list, "vcard"]])
-						.set("ai", function (button) {
-							var player = _status.event.player;
-							var name = button.link[2];
-							if (get.subtype(name) == "equip3" || player.getEquip(name)) return false;
-							switch (name) {
-								case "yexingyi":
-									if (
-										player.hp > 2 ||
-										player.getEquip("bagua") ||
-										player.getEquip("tengjia")
-									)
-										return 1.5 + Math.random();
-									return 0.5 + Math.random();
-								case "rewrite_bagua":
-								case "rewrite_renwang":
-									if (
-										player.getEquip("bagua") ||
-										player.getEquip("tengjia") ||
-										player.getEquip("renwang")
-									)
-										return Math.random();
-									return 1.2 + Math.random();
-								case "rewrite_tengjia":
-									if (player.getEquip("baiyin")) return 1.3 + Math.random();
-									return Math.random();
-								case "rewrite_baiyin":
-									return 0.4 + Math.random();
-								default:
-									return 0;
-							}
-						});
+                    player.recover(2);
 					"step 1";
-					if (result.bool) {
-						event.cardname = result.links[0][2];
-						player.chooseCard(
-							"h",
-							true,
-							"将一张手牌置于武将牌上，然后视为装备" + get.translation(event.cardname)
-						);
-					} else event.finish();
-					"step 2";
-					if (result.bool) {
-						event.result = {
-							bool: true,
-							cards: result.cards,
-							cost_data: {
-								cardname: event.cardname,
-							},
-						};
-					}
-				},
-				async content(event, trigger, player) {
-					await player
-						.addToExpansion(event.cards, player, "give")
-						.gaintag.add("kud_qiaoshou_equip");
-					if (!player.getExpansions("kud_qiaoshou_equip").length) return;
-					player.addTempSkill("kud_qiaoshou_equip", {
-						player: ["phaseUseEnd", "phaseZhunbeiBegin"],
-					});
-					var name = event.cost_data.cardname;
-					player.storage.kud_qiaoshou_equip2 = name;
-					player.markAuto("kud_qiaoshou_equip", cards);
-					var info = lib.card[name].skills;
-					if (info && info.length) player.addAdditionalSkill("kud_qiaoshou_equip", info);
-					game.log(player, "声明了", "#y" + get.translation(name));
-					player.draw(4);
-					player.recover(1);
+	                player.draw(4);
 				},
 			},
 			kud_buhui: {
@@ -8067,6 +7995,7 @@ game.import("character", function () {
 					player.$throw(event.result.cards);
 					player.addJudge({ name: "lebu" }, event.result.cards);
 					player.draw(4);
+					player.recover(2);
 					event.result.card.cards = [];
 					event.result.cards = [];
 					delete event.result.skill;
@@ -9340,6 +9269,7 @@ game.import("character", function () {
 					);
 					player.gainMaxHp();
 					player.recover();
+					player.draw(2);
 				},
 			},
 			yuzuru_kunfen: {
@@ -9498,7 +9428,7 @@ game.import("character", function () {
 				},
 				content() {
 					"step 0";
-					player.draw();
+					player.draw(2);
 					"step 1";
 					if (!trigger.player.countCards("h")) event.finish();
 					else
@@ -9619,6 +9549,8 @@ game.import("character", function () {
 					target.link(false);
 					"step 2";
 					target.turnOver(false);
+					player.draw(4);
+					player.recover(2);
 				},
 				intro: {
 					name: "七影蝶",
@@ -13491,22 +13423,22 @@ game.import("character", function () {
 			ayato_zonghuan_info:
 				"出牌阶段限一次，你可以观看一名其他角色的手牌，然后选择一项：将其中的一张牌置入弃牌堆，或以该角色的视角使用其中的一张，然后摸一张牌。",
 			ao_xishi: "习事",
-			ao_xishi_info: "锁定技，当你使用或打出♦牌时，或其他角色使用♦牌指定你为目标后，你摸一张牌。",
+			ao_xishi_info: "锁定技，当你使用或打出♦牌时，或其他角色使用♦牌指定你为目标后，你摸两张牌。",
 			ao_kuihun: "窥魂",
 			ao_kuihun_info:
-				"其他角色进入濒死状态时，你可以摸一张牌，然后观看其手牌并将其中一张牌置于你的武将牌上，称为「蝶」。你使用与一张「蝶」花色相同的牌时无距离和次数限制。你的手牌上限+X（X为蝶数）。",
+				"其他角色进入濒死状态时，你可以摸两张牌，然后观看其手牌并将其中一张牌置于你的武将牌上，称为「蝶」。你使用与一张「蝶」花色相同的牌时无距离和次数限制。你的手牌上限+X（X为蝶数）。",
 			ao_shixin: "释心",
 			ao_shixin_info:
 				"觉醒技，准备阶段，若你的「蝶」中包含至少三种花色，则你加1点体力上限并回复1点体力，失去〖窥魂〗并获得〖蝶归〗。",
 			ao_diegui: "蝶归",
 			ao_diegui_backup: "蝶归",
-			ao_diegui_info: "出牌阶段限一次，你可以将一张「蝶」交给一名角色，该角色摸两张牌并复原武将牌。",
+			ao_diegui_info: "出牌阶段限一次，你可以将一张「蝶」交给一名角色，该角色摸两张牌并复原武将牌。若为此做，你摸四张牌并回复一点体力。",
 			yuzuru_wuxin: "交心",
 			yuzuru_wuxin_info:
 				"结束阶段，你可以选择一项：失去1点体力并令一名角色摸两张牌，或弃置两张牌并回复1点体力。",
 			yuzuru_deyi: "得义",
 			yuzuru_deyi_info:
-				"觉醒技，当有其他角色死亡后，你减1点体力上限并回复1点体力，失去技能〖交心〗，获得技能〖往生〗〖困奋〗和〖去疾〗。",
+				"觉醒技，当有其他角色死亡后，你增加1点体力上限，回复1点体力并摸两张牌，失去技能〖交心〗，获得技能〖往生〗〖困奋〗和〖去疾〗。",
 			yuzuru_wangsheng: "往生",
 			yuzuru_wangsheng_info:
 				"觉醒技，当你即将死亡时，你防止此次死亡。你可以将任意张牌交给一名其他角色，然后减1点体力上限并将体力回复至2点，修改技能〖困奋〗和〖去疾〗。",
@@ -13800,7 +13732,7 @@ game.import("character", function () {
 			kud_qiaoshou_end: "巧手",
 			kud_qiaoshou_backup: "巧手",
 			kud_qiaoshou_info:
-				"出牌阶段/结束阶段，若你没有“巧”，则你可以将一张手牌作为“巧”置于武将牌上并摸四张牌并回复一点体力，且视为装备了一张你选择的武器牌或进攻坐骑/防具牌或防御坐骑直到“巧”进入弃牌堆。出牌阶段结束时/准备阶段开始时，你将“巧”置入弃牌堆并摸等量的牌",
+				"出牌阶段，若你没有“巧”，则你可以将一张手牌作为“巧”置于武将牌上并摸四张牌并回复一点体力，且视为装备了一张你选择的武器牌或进攻坐骑/防具牌或防御坐骑直到“巧”进入弃牌堆。出牌阶段结束时，你将“巧”置入弃牌堆并摸四张牌",
 			kud_buhui: "不悔",
 			kud_buhui_info:
 				"限定技，当你进入濒死状态时，你可以弃置“巧”和装备区内的所有牌（至少一张）并摸等量的牌，将体力回复至7点，获得技能〖重振〗。",
@@ -13882,7 +13814,7 @@ game.import("character", function () {
 				"你可以将一张锦囊牌当做【杀】使用（无距离限制）。当你使用【杀】指定第一个目标后，你选择一个与上次不同的选项：①此【杀】不可被响应。②此【杀】无视防具。③此【杀】伤害+1。④此【杀】不计入次数限制。",
 			kyou_duanfa: "断发",
 			kyou_duanfa_info:
-				"限定技，当你受到伤害时，若伤害值不小于你的体力值，则你可以摸4张手牌，防止此伤害并回复4点体力；且当你于你的下回合开始前成为【杀】或伤害性锦囊牌的目标后，你弃置一张牌。",
+				"限定技，当你受到伤害时，若伤害值不小于你的体力值，则你可以摸4张手牌，防止此伤害并回复4点体力；且当你于你的下回合开始前成为【杀】或伤害性锦囊牌的目标后，你摸一张牌。",
 			key_seira: "樱庭星罗",
 			seira_xinghui: "星辉",
 			seira_xinghui_info:
