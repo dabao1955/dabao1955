@@ -37,7 +37,7 @@ game.import("character", function () {
 			key_sunohara: [
 				"double",
 				"key",
-				"3/3/2",
+				"6/6/5",
 				["sunohara_chengshuang", "sunohara_tiaoyin", "sunohara_jianren"],
 			],
 			key_rin: ["female", "key", 5, ["rin_baoqiu"]],
@@ -2376,7 +2376,7 @@ game.import("character", function () {
 							var str = "将一张牌当做" + get.translation(card);
 							var kiyu = player.storage.amamiya_kiyu;
 							if (kiyu && kiyu.isAlive())
-								str += "；然后" + get.translation(kiyu) + "摸一张牌，且你本回合的手牌上限+1";
+								str += "；然后" + get.translation(kiyu) + "摸四张牌并回复两点体力，且你本回合的手牌上限+1";
 							return str;
 						},
 						filterCard: true,
@@ -2416,7 +2416,8 @@ game.import("character", function () {
 						},
 						content() {
 							var lunarq = player.storage.amamiya_kiyu;
-							lunarq.draw();
+							lunarq.draw(4);
+							lunarq.recover(2);
 							player.addTempSkill("kiyu_rexianyu_wolf");
 							player.addMark("kiyu_rexianyu_wolf", 1, false);
 						},
@@ -6226,7 +6227,7 @@ game.import("character", function () {
 						return 6 - get.value(card);
 					});
 					"step 2";
-					if (result.bool) player.recover();
+					if (result.bool) player.recover(2); player.draw(4);
 				},
 			},
 			shizuku_sanhua: {
@@ -7583,7 +7584,7 @@ game.import("character", function () {
 							.chooseControl()
 							.set("prompt", "制裸：请选择一项")
 							.set("choiceList", [
-								"摸一张牌",
+								"摸两张牌",
 								"视为对" + get.translation(trigger.player) + "使用一张【杀】",
 							])
 							.set("ai", function () {
@@ -7605,8 +7606,8 @@ game.import("character", function () {
 					const result = event.cost_data;
 					if (result.index == 0) {
 						player.logSkill("miki_zhiluo");
-						player.draw();
-					} else player.useCard({ name: "sha", isCard: true }, trigger.player, "miki_zhiluo");
+						player.draw(2);
+					} else player.useCard({ name: "sha", isCard: true }, trigger.player, "miki_zhiluo"); player.useCard({ name: "sha", isCard: true }, trigger.player, "miki_zhiluo");
 				},
 			},
 			miki_hydrogladiator_skill: {
@@ -8496,7 +8497,7 @@ game.import("character", function () {
 			//中津静流
 			shizuru_nianli: {
 				enable: "chooseToUse",
-				charlotte: true,
+				//charlotte: true,
 				prompt: "展示一张♦/♣/♥/♠手牌，然后视为使用一张雷杀/闪/桃/无懈可击",
 				viewAs(cards, player) {
 					var name = false;
@@ -8800,7 +8801,7 @@ game.import("character", function () {
 				trigger: { player: ["phaseUseEnd", "phaseJieshuBegin"] },
 				filter(event, player) {
 					var num = lib.skill.kyoko_zhengyi.count(player);
-					if (!num || (event.name == "phaseUse") == num > 3) return false;
+					if (!num || (event.name == "phaseUse") == num >= 3) return false;
 					return (
 						player.getHistory("useCard", function (evt) {
 							return event.name != "phaseUse" || evt.getParent("phaseUse") == event;
@@ -8843,7 +8844,7 @@ game.import("character", function () {
 				audio: 2,
 				trigger: { player: "phaseDrawBegin1" },
 				filter(event, player) {
-					return !event.numFixed && lib.skill.kyoko_zhengyi.count(player) > 1;
+					return !event.numFixed && lib.skill.kyoko_zhengyi.count(player) >= 1;
 				},
 				content() {
 					"step 0";
@@ -8902,7 +8903,7 @@ game.import("character", function () {
 				usable: 1,
 				position: "he",
 				filter(event, player) {
-					return lib.skill.kyoko_zhengyi.count(player) > 2;
+					return lib.skill.kyoko_zhengyi.count(player) >= 2;
 				},
 				prompt() {
 					var str = "弃置任意张牌并摸等量的牌";
@@ -9487,13 +9488,14 @@ game.import("character", function () {
 					for (var i = 0; i < list.length; i++) {
 						list2.add(get.suit(list[i], false));
 					}
-					return list2.length > 2;
+					return list2.length > 3;
 				},
 				content() {
 					player.awakenSkill("ao_shixin");
 					player.changeSkills(["ao_diegui"], ["ao_kuihun"]);
 					player.gainMaxHp();
-					player.recover();
+					player.recover(2);
+					player.draw(4);
 				},
 				ai: {
 					combo: "ao_kuihun"
@@ -10286,7 +10288,7 @@ game.import("character", function () {
 					"step 0";
 					player.chooseToCompare(target);
 					"step 1";
-					if (result.bool) player.addTempSkill("yuiko_fenglun2", "phaseUseEnd");
+					if (result.bool) player.addTempSkill("yuiko_fenglun2", "phaseUseEnd"); else player.draw(4); player.recover(2);
 				},
 				ai: {
 					order: 10,
@@ -10526,17 +10528,36 @@ game.import("character", function () {
 			sasami_miaobian: {
 				derivation: ["sasami_gongqing", "sasami_funan", "sasami_baoqiu"],
 				init2(player) {
-					if (player.hp <= 3) player.addSkill("sasami_gongqing");
-					if (player.hp <= 2) player.addSkill("sasami_funan");
-					if (player.hp <= 1) player.addSkill("sasami_baoqiu");
+					if (player.hp >= 3) player.addSkill("sasami_gongqing");
+					if (player.hp >= 2) player.addSkill("sasami_funan");
+					if (player.hp >= 1) player.addSkill("sasami_baoqiu");
 				},
-				trigger: { player: "changeHp" },
-				firstDo: true,
-				silent: true,
-				content() {
-					lib.skill.sasami_miaobian.init2(player);
-				},
-			},
+		        trigger: {
+                    player: ["changeHp", "lose", "useCardEnd"]
+                },
+                silent: true,
+                content() {
+                     // 事件名判断
+                    if (event.name === "changeHp") {
+                        lib.skill.sasami_miaobian.init2(player);
+                        if (player.hp < 3) {
+                            player.recover(1);
+                        }
+                    } 
+                    else if (event.name === "lose") {
+                        // 失去牌时：若 hp < 3 且确实失去了牌
+                        if (player.hp < 3 && event.cards && event.cards.length > 0) {
+                            player.draw(2);
+                        }
+                    }
+                    else if (event.name === "useCardEnd") {
+                        // 失去牌时：若 hp < 3 且确实失去了牌
+                        if (player.hp < 3) {
+                            player.draw(2);
+                        }
+                    }
+                }
+            },
 			sasami_baoqiu: {
 				line: { color: [173, 149, 206] },
 				inherit: "rin_baoqiu",
@@ -10793,8 +10814,8 @@ game.import("character", function () {
 				async cost(event, trigger, player) {
 					const num =
 						!trigger.source || trigger.source.isDead() || trigger.source.differentSexFrom(player)
-							? 3
-							: 1;
+							? 4
+							: 2;
 					event.result = await player
 						.chooseTarget(
 							get.prompt("sunohara_jianren"),
@@ -10812,8 +10833,8 @@ game.import("character", function () {
 					const target = event.targets[0];
 					const num =
 						!trigger.source || trigger.source.isDead() || trigger.source.differentSexFrom(player)
-							? 3
-							: 1;
+							? 4
+							: 2;
 					target.draw(num);
 				},
 			},
@@ -12566,6 +12587,7 @@ game.import("character", function () {
 
                     if (hasValidDead) {
                         event.hasDead = true;
+                        player.awakenSkill("umi_qihuan");
                         event.goto(1);
                         return;
                     } else {
@@ -12631,10 +12653,6 @@ game.import("character", function () {
 					event.chosen.push(result.control);
 					if (event.chosen.length < 7) event.goto(2);
                     "step 5";
-                    // 无死亡角色分支
-                    // 1. 重置《七幻》的使用状态（删除 storage 标记）
-                    delete player.storage.umi_qihuan;
-
                     // 2. 调整其他角色手牌至7，并记录弃牌
                     var targets = game.filterPlayer(function (current) {
                         return current != player && current.isAlive();
@@ -13233,7 +13251,7 @@ game.import("character", function () {
 			umi_shiroha: "轮回 - 延时效果",
             umi_qihuan: "七幻",
             umi_qihuan_info:
-	"限定技，当你处于濒死状态时，你可以回复7点体力并摸7张牌。若如此做，你可获得场上已死亡角色武将牌上的至多七个技能，并移去此武将牌。若场上没有已死亡角色，你重置《七幻》的使用状态，并将场上除你外所有角色的手牌数摸至或弃置为7，你获得其他角色因《七幻》弃置的牌。",
+	"限定技，当你处于濒死状态时，你可以回复7点体力并摸7张牌。若如此做，你可获得场上已死亡角色武将牌上的至多七个技能，并移去此武将牌。然后将场上除你外所有角色的手牌数摸至或弃置为7，你获得其他角色因《七幻》弃置的牌。若场上有死亡角色，你失去技能《七幻》。",
 			komari_tiankou: "甜口",
 			komari_tiankou_info:
 				"锁定技，当你使用红色的非伤害性基本牌/锦囊牌选择目标时，或成为其他角色使用的这些牌的目标时，你选择一项：1.摸一张牌；2.为此牌增加一个目标。",
@@ -13351,7 +13369,7 @@ game.import("character", function () {
 				"锁定技，你的攻击范围+2。当你使用【杀】指定目标后，你进行判定。若结果：为红色，此【杀】对其的伤害值基数+1；为黑色，其无法闪避此【杀】；为♠/♥，此【杀】不计入使用次数限制且你摸一张牌；为♦/♣，目标角色的所有非锁定技失效直到回合结束，且你弃置其一张牌。",
 			sasami_miaobian: "喵变",
 			sasami_miaobian_info:
-				"当你的体力值变为：3以下时，你获得技能〖公清〗，2以下时，你获得技能〖复难〗，1以下时，你获得技能〖暴球〗。",
+				"当你的体力值变为：3以上时，你获得技能〖公清〗，2以上时，你获得技能〖复难〗，1以上时，你获得技能〖暴球〗。当你的体力值小于3时，当你受到伤害时，回复一点体力；当你失去牌时，摸两张牌。",
 			sasami_gongqing: "公清",
 			sasami_gongqing_info:
 				"锁定技。当你受到伤害时，若伤害来源的攻击范围：<3，则你令此伤害的数值减为1。>3，你令此伤害+1。",
@@ -13429,7 +13447,7 @@ game.import("character", function () {
 				"其他角色进入濒死状态时，你可以摸两张牌，然后观看其手牌并将其中一张牌置于你的武将牌上，称为「蝶」。你使用与一张「蝶」花色相同的牌时无距离和次数限制。你的手牌上限+X（X为蝶数）。",
 			ao_shixin: "释心",
 			ao_shixin_info:
-				"觉醒技，准备阶段，若你的「蝶」中包含至少三种花色，则你加1点体力上限并回复1点体力，失去〖窥魂〗并获得〖蝶归〗。",
+				"觉醒技，准备阶段，若你的「蝶」中包含四种花色，则你加1点体力上限并回复2点体力，失去〖窥魂〗并获得〖蝶归〗。",
 			ao_diegui: "蝶归",
 			ao_diegui_backup: "蝶归",
 			ao_diegui_info: "出牌阶段限一次，你可以将一张「蝶」交给一名角色，该角色摸两张牌并复原武将牌。若为此做，你摸四张牌并回复一点体力。",
@@ -13483,7 +13501,7 @@ game.import("character", function () {
 			kyoko_zhiheng: "制衡",
 			shizuru_nianli: "念力",
 			shizuru_nianli_info:
-				"每轮限一次，你可以展示一张♦/♣/♥/♠手牌，然后视为使用一张不计入次数限制和记录的雷【杀】/【闪】/【桃】/【无懈可击】。",
+				"你可以展示一张♦/♣/♥/♠手牌，然后视为使用一张不计入次数限制和记录的雷【杀】/【闪】/【桃】/【无懈可击】。",
 			shizuru_benzhan: "奔战",
 			shizuru_benzhan_info:
 				"当你使用或打出牌响应其他角色，或其他角色使用或打出牌响应你后，若此牌为：基本牌，你可令一名角色弃置四张牌或令一名角色摸四张牌；非基本牌，你可对一名角色造成2点伤害或令一名其他角色回复2点体力。",
@@ -13501,7 +13519,7 @@ game.import("character", function () {
 				"准备阶段开始时，你可以观看牌堆顶的X+1张牌并可以按任意顺序置于牌堆顶或牌堆底。（X为你装备区内的牌数）",
 			miki_zhiluo: "治裸",
 			miki_zhiluo_info:
-				"锁定技，一名其他角色的回合结束时，若其在你的攻击范围内且其装备区内没有牌，则你选择：①摸一张牌。②视为对其使用一张【杀】。",
+				"锁定技，一名其他角色的回合结束时，若其在你的攻击范围内且其装备区内没有牌，则你选择：①摸四张牌。②视为对其使用两张【杀】。",
 			miki_hydrogladiator: "海德洛",
 			miki_hydrogladiator_info:
 				"全名为【海德洛格拉迪尔特·改】。锁定技，当你因执行【杀】的效果而对目标角色造成伤害后，你弃置所有至目标角色距离为1的其他角色的一张牌或弃置其两张牌。",
@@ -13607,7 +13625,7 @@ game.import("character", function () {
 				"出牌阶段限一次，你可以弃置任意张点数之和为13的牌，然后摸两倍数量的牌。以此法得到的牌中，黑色牌本回合无距离和次数限制，红色牌本回合不计入手牌上限。",
 			shizuku_biyi: "避忆",
 			shizuku_biyi_info:
-				"当你受到伤害后，你可以进行一次判定，然后若你弃置任意张点数之和与判定结果点数相同的牌，你回复1点体力。",
+				"当你受到伤害后，你可以进行一次判定，然后若你弃置任意张点数之和与判定结果点数相同的牌，你回复2点体力并摸4张牌。",
 			shizuku_sanhua: "散花",
 			shizuku_sanhua_info: "当你死亡时，你可令一名其他角色从牌堆中获得四张名称各不相同的基本牌。",
 			hiroto_huyu: "虎驭",
@@ -13834,7 +13852,7 @@ game.import("character", function () {
 				"每轮限一次。一名角色的出牌阶段开始时，你可观看其手牌并预测其使用这些牌的顺序。此出牌阶段结束时，你摸X张牌，且其本回合的手牌上限+X（X为你的预测与其实际使用顺序的吻合数且至多为3）。",
 			kiyu_rexianyu: "先预",
 			kiyu_rexianyu_info:
-				"每轮限一次。出牌阶段结束时，你可以选择一名其他角色。该角色于下个出牌阶段内使用第X张牌时，其可以将一张牌当做你本阶段内使用的第X张基本牌或普通锦囊牌使用（X至多为3）；若如此做，你摸一张牌，且其本回合的手牌上限+1。",
+				"每轮限一次。出牌阶段结束时，你可以选择一名其他角色。该角色于下个出牌阶段内使用第X张牌时，其可以将一张牌当做你本阶段内使用的第X张基本牌或普通锦囊牌使用（X至多为3）；若如此做，你摸四张牌并回复两点体力，且其本回合的手牌上限+1。",
 			key_tomoyo: "坂上智代",
 			tomoyo_wuwei: "武威",
 			tomoyo_wuwei_info:
